@@ -1,0 +1,515 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage dir=ltr lang=zh-cn class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>添加内容 | Tommas's Blog</title>
+<meta name=description content="Adding Content - 添加内容 https://www.docsy.dev/docs/adding-content/content/ ​ 向 你的Docsy 站点添加不同类型的内容。 ​ 现在你有了一个带有 Docsy 的新 Hugo 站点，是时候添加一些内容了！本页面告诉你如何使用主题来"><meta property="og:url" content="https://oexss.github.io/zh-cn/docs/contentandcustomization/addingcontent/"><meta property="og:site_name" content="Tommas's Blog"><meta property="og:title" content="添加内容"><meta property="og:description" content="Adding Content - 添加内容 https://www.docsy.dev/docs/adding-content/content/ ​ 向 你的Docsy 站点添加不同类型的内容。 ​ 现在你有了一个带有 Docsy 的新 Hugo 站点，是时候添加一些内容了！本页面告诉你如何使用主题来"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:published_time" content="2023-05-18T17:03:08+08:00"><meta property="article:modified_time" content="2024-07-02T09:40:41+08:00"><meta itemprop=name content="添加内容"><meta itemprop=description content="Adding Content - 添加内容 https://www.docsy.dev/docs/adding-content/content/ ​ 向 你的Docsy 站点添加不同类型的内容。 ​ 现在你有了一个带有 Docsy 的新 Hugo 站点，是时候添加一些内容了！本页面告诉你如何使用主题来"><meta itemprop=datePublished content="2023-05-18T17:03:08+08:00"><meta itemprop=dateModified content="2024-07-02T09:40:41+08:00"><meta itemprop=wordCount content="7106"><meta name=twitter:card content="summary"><meta name=twitter:title content="添加内容"><meta name=twitter:description content="Adding Content - 添加内容 https://www.docsy.dev/docs/adding-content/content/ ​ 向 你的Docsy 站点添加不同类型的内容。 ​ 现在你有了一个带有 Docsy 的新 Hugo 站点，是时候添加一些内容了！本页面告诉你如何使用主题来"><link rel=preload href=/scss/main.min.e27e9dbace77e637983a3900590da42ddfc471da09131ef565f7ea5853a1205a.css as=style><link href=/scss/main.min.e27e9dbace77e637983a3900590da42ddfc471da09131ef565f7ea5853a1205a.css rel=stylesheet><script src=https://code.jquery.com/jquery-3.7.1.min.js integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin=anonymous></script><script defer src=https://unpkg.com/lunr@2.3.9/lunr.min.js integrity=sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli crossorigin=anonymous></script><link rel=stylesheet href=/css/prism.css></head><body class=td-page><header><nav class="td-navbar js-navbar-scroll" data-bs-theme=dark><div class="container-fluid flex-column flex-md-row"><a class=navbar-brand href=/zh-cn/><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class=navbar-brand__name>Tommas's Blog</span></a><div class="td-navbar-nav-scroll ms-md-auto" id=main_navbar><ul class=navbar-nav><li class=nav-item><a class=nav-link href=/zh-cn/about/><span>关于</span></a></li><li class=nav-item><a class="nav-link active" href=/zh-cn/docs/><span>文档</span></a></li><li class=nav-item><a class=nav-link href=/zh-cn/blog/><span>博客</span></a></li><li class=nav-item><a class=nav-link href=/zh-cn/community/><span>社区</span></a></li><li class="nav-item dropdown d-none d-lg-block"><div class=dropdown><a class="nav-link dropdown-toggle" href=# role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false>中文</a><ul class=dropdown-menu><li><a class=dropdown-item href=/en/>English</a></li></ul></div></li><li class="td-light-dark-menu nav-item dropdown"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5.0 010 .708l-7 7a.5.5.0 01-.708.0l-3.5-3.5a.5.5.0 11.708-.708L6.5 10.293l6.646-6.647a.5.5.0 01.708.0z"/></symbol><symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 108 1v14zm0 1A8 8 0 118 0a8 8 0 010 16z"/></symbol><symbol id="moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768.0 01.08.858 7.208 7.208.0 00-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527.0 1.04-.055 1.533-.16a.787.787.0 01.81.316.733.733.0 01-.031.893A8.349 8.349.0 018.344 16C3.734 16 0 12.286.0 7.71.0 4.266 2.114 1.312 5.124.06A.752.752.0 016 .278z"/><path d="M10.794 3.148a.217.217.0 01.412.0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217.0 010 .412l-1.162.387A1.734 1.734.0 0011.593 7.69l-.387 1.162a.217.217.0 01-.412.0l-.387-1.162A1.734 1.734.0 009.31 6.593l-1.162-.387a.217.217.0 010-.412l1.162-.387a1.734 1.734.0 001.097-1.097l.387-1.162zM13.863.099a.145.145.0 01.274.0l.258.774c.115.346.386.617.732.732l.774.258a.145.145.0 010 .274l-.774.258a1.156 1.156.0 00-.732.732l-.258.774a.145.145.0 01-.274.0l-.258-.774a1.156 1.156.0 00-.732-.732l-.774-.258a.145.145.0 010-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/></symbol><symbol id="sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 0zm0 13a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 13zm8-5a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2a.5.5.0 01.5.5zM3 8a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2A.5.5.0 013 8zm10.657-5.657a.5.5.0 010 .707l-1.414 1.415a.5.5.0 11-.707-.708l1.414-1.414a.5.5.0 01.707.0zm-9.193 9.193a.5.5.0 010 .707L3.05 13.657a.5.5.0 01-.707-.707l1.414-1.414a.5.5.0 01.707.0zm9.193 2.121a.5.5.0 01-.707.0l-1.414-1.414a.5.5.0 01.707-.707l1.414 1.414a.5.5.0 010 .707zM4.464 4.465a.5.5.0 01-.707.0L2.343 3.05a.5.5.0 11.707-.707l1.414 1.414a.5.5.0 010 .708z"/></symbol></svg>
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center" id=bd-theme type=button aria-expanded=false data-bs-toggle=dropdown data-bs-display=static aria-label="Toggle theme (auto)"><svg class="bi my-1 theme-icon-active"><use href="#circle-half"/></svg></button><ul class="dropdown-menu dropdown-menu-end" aria-labelledby=bd-theme-text><li><button type=button class="dropdown-item d-flex align-items-center" data-bs-theme-value=light aria-pressed=false>
+<svg class="bi me-2 opacity-50"><use href="#sun-fill"/></svg>
+Light<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li><li><button type=button class="dropdown-item d-flex align-items-center" data-bs-theme-value=dark aria-pressed=false>
+<svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"/></svg>
+Dark<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li><li><button type=button class="dropdown-item d-flex align-items-center active" data-bs-theme-value=auto aria-pressed=true>
+<svg class="bi me-2 opacity-50"><use href="#circle-half"/></svg>
+Auto<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul></li></ul></div><div class="d-none d-lg-block"><div class="td-search td-search--offline"><div class=td-search__icon></div><input type=search class="td-search__input form-control" placeholder=站内搜索… aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.5ec604344f6635198f8520e5b26df7ba.json data-offline-search-base-href=/ data-offline-search-max-results=10></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"><script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-zh-cndocscontentandcustomizationaddingcontent").addClass("active"),$("#td-section-nav #m-zh-cndocscontentandcustomizationaddingcontent-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-zh-cndocscontentandcustomizationaddingcontent").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop("checked",!0),$("#td-section-nav #m-zh-cndocscontentandcustomizationaddingcontent-li").siblings("li").addClass("show"),$("#td-section-nav #m-zh-cndocscontentandcustomizationaddingcontent-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script><div id=td-sidebar-menu class="td-sidebar__inner d-none"><form class="td-sidebar__search d-flex align-items-center"><div class="td-search td-search--offline"><div class=td-search__icon></div><input type=search class="td-search__input form-control" placeholder=站内搜索… aria-label=站内搜索… autocomplete=off data-offline-search-index-json-src=/offline-search-index.5ec604344f6635198f8520e5b26df7ba.json data-offline-search-base-href=/ data-offline-search-max-results=10></div><button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type=button data-bs-toggle=collapse data-bs-target=#td-section-nav aria-controls=td-section-nav aria-expanded=false aria-label="Toggle section navigation"></button></form><nav class="td-sidebar-nav collapse" id=td-section-nav><div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none"><div class=dropdown><a class="nav-link dropdown-toggle" href=# role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false>中文</a><ul class=dropdown-menu><li><a class=dropdown-item href=/en/docs/>English</a></li></ul></div></div><ul class="td-sidebar-nav__section pe-md-3 ul-0"><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocs-li><a href=/zh-cn/docs/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-zh-cndocs><span>文档</span></a><ul class=ul-1><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocsgetstarted-li><a href=/zh-cn/docs/getstarted/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocsgetstarted><span>入门指南</span></a><ul class="ul-2 foldable"><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocsgetstartedusedocsyasahugomodule-li><a href=/zh-cn/docs/getstarted/usedocsyasahugomodule/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocsgetstartedusedocsyasahugomodule><span>将Docsy作为Hugo模块使用</span></a><ul class="ul-3 foldable"><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedusedocsyasahugomodulebeforeyoubegin-li><a href=/zh-cn/docs/getstarted/usedocsyasahugomodule/beforeyoubegin/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedusedocsyasahugomodulebeforeyoubegin><span>开始之前</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedusedocsyasahugomodulestartwithaprepopulatedsite-li><a href=/zh-cn/docs/getstarted/usedocsyasahugomodule/startwithaprepopulatedsite/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedusedocsyasahugomodulestartwithaprepopulatedsite><span>创建新站点：从预设的站点开始</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedusedocsyasahugomodulestartasitefromscratch-li><a href=/zh-cn/docs/getstarted/usedocsyasahugomodule/startasitefromscratch/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedusedocsyasahugomodulestartasitefromscratch><span>创建新站点：从头开始创建新站点</span></a></li></ul></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedothersetupoptions-li><a href=/zh-cn/docs/getstarted/othersetupoptions/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedothersetupoptions><span>其他设置选项</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstarteddeploydocsyinsideadockercontainer-li><a href=/zh-cn/docs/getstarted/deploydocsyinsideadockercontainer/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstarteddeploydocsyinsideadockercontainer><span>在 Docker 容器中部署 Docsy</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedbasicsiteconfiguration-li><a href=/zh-cn/docs/getstarted/basicsiteconfiguration/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedbasicsiteconfiguration><span>基本站点配置</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsgetstartedknownissues-li><a href=/zh-cn/docs/getstarted/knownissues/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsgetstartedknownissues><span>已知问题</span></a></li></ul></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocscontentandcustomization-li><a href=/zh-cn/docs/contentandcustomization/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocscontentandcustomization><span>内容和自定义</span></a><ul class="ul-2 foldable"><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationaddingcontent-li><a href=/zh-cn/docs/contentandcustomization/addingcontent/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationaddingcontent><span>添加内容</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationlookandfeel-li><a href=/zh-cn/docs/contentandcustomization/lookandfeel/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationlookandfeel><span>外观与感受</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationnavigationandsearch-li><a href=/zh-cn/docs/contentandcustomization/navigationandsearch/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationnavigationandsearch><span>导航和搜索</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationdocversioning-li><a href=/zh-cn/docs/contentandcustomization/docversioning/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationdocversioning><span>文档版本控制</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationshortcodes-li><a href=/zh-cn/docs/contentandcustomization/shortcodes/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationshortcodes><span>Docsy简码</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationlogosandimages-li><a href=/zh-cn/docs/contentandcustomization/logosandimages/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationlogosandimages><span>Logo和图片</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationprintsupport-li><a href=/zh-cn/docs/contentandcustomization/printsupport/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationprintsupport><span>打印支持</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationanalyticsuserfeedbackandseo-li><a href=/zh-cn/docs/contentandcustomization/analyticsuserfeedbackandseo/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationanalyticsuserfeedbackandseo><span>分析、用户反馈和SEO</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationrepositorylinks-li><a href=/zh-cn/docs/contentandcustomization/repositorylinks/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationrepositorylinks><span>代码库链接</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationtaxonomysupport-li><a href=/zh-cn/docs/contentandcustomization/taxonomysupport/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationtaxonomysupport><span>分类支持</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontentandcustomizationdiagramsandformulae-li><a href=/zh-cn/docs/contentandcustomization/diagramsandformulae/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocscontentandcustomizationdiagramsandformulae><span>图表和公式</span></a></li></ul></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsmulti-languagesupport-li><a href=/zh-cn/docs/multi-languagesupport/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocsmulti-languagesupport><span>多语言支持</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocspreviewsanddeployment-li><a href=/zh-cn/docs/previewsanddeployment/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocspreviewsanddeployment><span>预览和部署</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocsupdatedocsy-li><a href=/zh-cn/docs/updatedocsy/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocsupdatedocsy><span>更新 Docsy</span></a><ul class="ul-2 foldable"><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsupdatedocsyupdateyourdocsyhugomodule-li><a href=/zh-cn/docs/updatedocsy/updateyourdocsyhugomodule/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsupdatedocsyupdateyourdocsyhugomodule><span>更新您的 Docsy Hugo 模块</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsupdatedocsyupdatedocsywithouthugomodules-li><a href=/zh-cn/docs/updatedocsy/updatedocsywithouthugomodules/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsupdatedocsyupdatedocsywithouthugomodules><span>不使用 Hugo 模块更新 Docsy</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsupdatedocsymigratetohugomodules-li><a href=/zh-cn/docs/updatedocsy/migratetohugomodules/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsupdatedocsymigratetohugomodules><span>迁移到Hugo模块</span></a></li></ul></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-cndocsbestpractices-li><a href=/zh-cn/docs/bestpractices/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocsbestpractices><span>最佳实践</span></a><ul class="ul-2 foldable"><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsbestpracticeshugocontenttips-li><a href=/zh-cn/docs/bestpractices/hugocontenttips/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsbestpracticeshugocontenttips><span>Hugo 内容提示</span></a></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocsbestpracticesorganizingyourcontent-li><a href=/zh-cn/docs/bestpractices/organizingyourcontent/ class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id=m-zh-cndocsbestpracticesorganizingyourcontent><span>组织你的内容</span></a></li></ul></li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-cndocscontributionguidelines-li><a href=/zh-cn/docs/contributionguidelines/ class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id=m-zh-cndocscontributionguidelines><span>贡献指南</span></a></li></ul></li></ul></nav></div></aside><aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none"><div class="td-page-meta ms-2 pb-1 pt-2 mb-0"><a href=https://github.com/onxs/doc/tree/main/content/zh-cn/docs/ContentAndCustomization/AddingContent.md class="td-page-meta--view td-page-meta__view" target=_blank rel=noopener><i class="fa-solid fa-file-lines fa-fw"></i> 查看页面源码</a>
+<a href=https://github.com/onxs/doc/edit/main/content/zh-cn/docs/ContentAndCustomization/AddingContent.md class="td-page-meta--edit td-page-meta__edit" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/onxs/doc/new/main/content/zh-cn/docs/ContentAndCustomization?filename=change-me.md&amp;value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class="td-page-meta--child td-page-meta__child" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> 添加子页面</a>
+<a href="https://github.com/onxs/doc/issues/new?title=%e6%b7%bb%e5%8a%a0%e5%86%85%e5%ae%b9" class="td-page-meta--issue td-page-meta__issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> 提交文档问题</a>
+<a href=https://github.com/onxs/doc/issues/new class="td-page-meta--project td-page-meta__project-issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> 提交项目问题</a>
+<a id=print href=/zh-cn/docs/contentandcustomization/_print/><i class="fa-solid fa-print fa-fw"></i> 整节打印</a></div><div class=td-toc><nav id=TableOfContents><ul><li><a href=#内容根目录>内容根目录</a></li><li><a href=#内容章节和模板>内容章节和模板</a><ul><li><a href=#自定义章节>自定义章节</a></li><li><a href=#替代站点结构>替代站点结构</a></li></ul></li><li><a href=#页面前置元数据>页面前置元数据</a></li><li><a href=#页面内容和标记>页面内容和标记</a><ul><li></li><li><a href=#处理链接>处理链接</a></li><li><a href=#内容样式>内容样式</a></li></ul></li><li><a href=#页面-bundles>页面 bundles</a></li><li><a href=#adding-docs-and-blog-posts>Adding docs and blog posts</a><ul><li><a href=#组织您的文档>组织您的文档</a></li><li><a href=#组织您的博客文章>组织您的博客文章</a></li></ul></li><li><a href=#working-with-top-level-landing-pages-使用顶级着陆页面>Working with top-level landing pages. 使用顶级着陆页面</a><ul><li><a href=#自定义示例站点页面>自定义示例站点页面</a></li><li><a href=#构建你自己的着陆页>构建你自己的着陆页</a></li></ul></li><li><a href=#添加community-页面>添加community 页面</a></li><li><a href=#添加静态内容>添加静态内容</a></li><li><a href=#rss-订阅>RSS 订阅</a></li><li><a href=#sitemap>Sitemap</a></li></ul></nav></div><div class="taxonomy taxonomy-terms-cloud taxo-tags"><h5 class=taxonomy-title>Tag Cloud</h5><ul class=taxonomy-terms><li><a class=taxonomy-term href=https://oexss.github.io/zh-cn/tags/idea/ data-taxonomy-term=idea><span class=taxonomy-label>Idea</span><span class=taxonomy-count>1</span></a></li><li><a class=taxonomy-term href=https://oexss.github.io/zh-cn/tags/novel/ data-taxonomy-term=novel><span class=taxonomy-label>Novel</span><span class=taxonomy-count>2</span></a></li></ul></div><div class="taxonomy taxonomy-terms-cloud taxo-categories"><h5 class=taxonomy-title>Categories</h5><ul class=taxonomy-terms><li><a class=taxonomy-term href=https://oexss.github.io/zh-cn/categories/idea/ data-taxonomy-term=idea><span class=taxonomy-label>Idea</span><span class=taxonomy-count>1</span></a></li><li><a class=taxonomy-term href=https://oexss.github.io/zh-cn/categories/novel/ data-taxonomy-term=novel><span class=taxonomy-label>Novel</span><span class=taxonomy-count>2</span></a></li></ul></div></aside><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><h1>添加内容</h1><header class=article-meta><p class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>&nbsp; 15 分钟阅读 &nbsp;</p></header><h1 id=adding-content---添加内容>Adding Content - 添加内容<a class=td-heading-self-link href=#adding-content---%e6%b7%bb%e5%8a%a0%e5%86%85%e5%ae%b9 aria-label="Heading self-link"></a></h1><p><a href=https://www.docsy.dev/docs/adding-content/content/>https://www.docsy.dev/docs/adding-content/content/</a></p><p>​ 向 你的Docsy 站点添加不同类型的内容。</p><p>​ 现在你有了一个带有 Docsy 的新 Hugo 站点，是时候添加一些内容了！本页面告诉你如何使用主题来添加和组织站点内容。</p><h2 id=内容根目录>内容根目录<a class=td-heading-self-link href=#%e5%86%85%e5%ae%b9%e6%a0%b9%e7%9b%ae%e5%bd%95 aria-label="Heading self-link"></a></h2><p>​ 你可以在你的 Hugo 站点项目的内容根目录下添加站点内容 - 即 <code>content/</code> 或<a href=https://www.docsy.dev/docs/language/>语言特定的</a>根目录，比如 <code>content/en/</code>。这里的主要例外是你不想构建到站点中的静态文件：你可以在下面的<a href=https://www.docsy.dev/docs/adding-content/content/#adding-static-content>添加静态内容</a>中了解更多关于添加这些文件的位置。你的内容根目录中的文件通常按照站点章节和模板分组到子目录中，我们将在<a href=https://www.docsy.dev/docs/adding-content/content/#content-sections-and-templates>内容章节和模板</a>中查看这些子目录。</p><p>​ 你可以在<a href=https://gohugo.io/getting-started/directory-structure/#directory-structure-explained>目录结构解释</a>中了解有关 Hugo 目录结构的更多信息。</p><h2 id=内容章节和模板>内容章节和模板<a class=td-heading-self-link href=#%e5%86%85%e5%ae%b9%e7%ab%a0%e8%8a%82%e5%92%8c%e6%a8%a1%e6%9d%bf aria-label="Heading self-link"></a></h2><p>​ Hugo 使用你提供的内容文件和站点主题提供的任何模板来构建你的站点页面。这些模板（在 Hugo 术语中称为"layouts（布局）"）包括你的页面的页眉、页脚、导航和样式表链接：基本上除了页面的具体内容以外的一切。这些模板又可以由局部组成：用于页面元素（如页眉、搜索框等）的小型可重用 HTML 片段。</p><p>​ 因为大多数技术文档站点有不同的章节来存放不同类型的内容，Docsy 主题提供了以下顶级站点章节的<a href=https://github.com/google/docsy/tree/main/layouts>模板</a>：</p><ul><li><a href=https://github.com/google/docsy/tree/main/layouts/docs>docs</a> 用于你站点的文档章节的页面。</li><li><a href=https://github.com/google/docsy/tree/main/layouts/blog>blog</a> 用于你站点的博客页面。</li><li><a href=https://github.com/google/docsy/tree/main/layouts/community>community</a> 用于你站点的社区页面。</li></ul><p>​ 它还提供了一种<a href=https://github.com/google/docsy/tree/main/layouts/_default>默认的"着陆页"模板类型</a>，带有站点页眉和页脚，但没有左侧导航，你可以用它来作为任何其他章节的模板。在这个站点和我们的示例站点中，它用于站点<a href=https://www.docsy.dev/>主页</a>和<a href=https://www.docsy.dev/about/>About</a>页面。</p><p>​ 你站点中的每个顶级章节都对应着站点内容根目录中的一个目录。根据内容所在的文件夹，Hugo 自动应用适当的模板来渲染该章节。例如，此页面位于站点内容根目录 <code>content/en/</code> 的 <code>docs</code> 子目录中，因此 Hugo 自动应用 <code>docs</code> 模板。你可以通过显式指定特定页面的模板或内容类型来覆盖此行为。</p><p>​ 如果你复制了示例站点，则已经拥有适当命名的顶级章节目录来使用 Docsy 的模板，每个目录都有一个索引页面（ <code>_index.md</code> 或 <code>index.html</code>）供用户访问。这些顶级章节也会出现在示例站点的<a href=https://www.docsy.dev/docs/adding-content/navigation/#top-level-menu>顶级菜单</a>中。</p><h3 id=自定义章节>自定义章节<a class=td-heading-self-link href=#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%ab%a0%e8%8a%82 aria-label="Heading self-link"></a></h3><p>​ 如果您复制了示例站点，但并不想使用提供的任何内容章节之一，只需删除相应的内容子目录即可。同样，如果您想添加一个顶级章节，只需添加一个新的子目录，但如果您想使用除默认模板之外的任何现有Docsy模板，则需要在每个页面的<a href=https://www.docsy.dev/docs/adding-content/content/#page-frontmatter>前置元数据</a>中明确指定布局或内容类型。例如，如果您创建一个新目录<code>content/en/amazing</code>，并且希望该自定义章节中的一个或多个页面使用Docsy的<code>docs</code>模板，则在每个页面的前置元数据中添加<code>type: docs</code>：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;My amazing new section&quot;
+weight: 1
+type: docs
+description: &gt;
+    A special section with a docs layout.
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;My amazing new section&quot;
+weight = 1
+type = &quot;docs&quot;
+description = '''
+A special section with a docs layout.
+'''
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;My amazing new section&quot;,
+  &quot;weight&quot;: 1,
+  &quot;type&quot;: &quot;docs&quot;,
+  &quot;description&quot;: &quot;A special section with a docs layout.\n&quot;
+}
+```
+</code></pre><p>​ 或者，根据现有模板，在您项目的<code>layouts</code>目录中为您的新章节创建自己的页面模板。</p><p>​ 您可以在<a href=https://gohugo.io/templates/>Hugo模板</a>中了解更多有关Hugo页面布局的工作原理。本页面的其余部分将告诉您如何添加内容并使用Docsy的每个模板。</p><h3 id=替代站点结构>替代站点结构<a class=td-heading-self-link href=#%e6%9b%bf%e4%bb%a3%e7%ab%99%e7%82%b9%e7%bb%93%e6%9e%84 aria-label="Heading self-link"></a></h3><p>​ 如上所述，默认情况下，您的站点具有主页（使用<code>_default</code>布局），<code>/docs/</code>下的文档章节，<code>/blog/</code>下的博客章节和<code>/community/</code>下的社区章节。每个章节的<a href=https://gohugo.io/content-management/types/>类型</a>（确定其使用的布局）与其目录名称匹配。</p><p>​ 在某些情况下，您可能希望具有不同的目录结构，但仍要利用Docsy的布局。一个常见的例子是"文档站点"，其中大多数页面（包括主页）都使用文档布局，或者您可能更喜欢将<code>/news/</code>目录视为博客布局。</p><p>​ 自Hugo 0.76以来，通过使用<a href=https://gohugo.io/content-management/front-matter/#target-specific-pages>目标特定级联前置元数据</a>，而不需要复制布局到您的站点或在每个页面上都指定<code>type: blog</code>，这已经变得可行。</p><p>​ 例如，对于<code>/news/</code>章节，您可以在index 页面中指定以下前置元数据，这将更改该章节及其以下所有内容的类型为"blog"：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;Latest News&quot;
+linkTitle: &quot;News&quot;
+menu:
+  main:
+    weight: 30
+
+cascade:
+  - type: &quot;blog&quot;
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;Latest News&quot;
+linkTitle = &quot;News&quot;
+
+[menu.main]
+weight = 30
+
+[[cascade]]
+type = &quot;blog&quot;
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;Latest News&quot;,
+  &quot;linkTitle&quot;: &quot;News&quot;,
+  &quot;menu&quot;: {
+    &quot;main&quot;: {
+      &quot;weight&quot;: 30
+    }
+  },
+  &quot;cascade&quot;: [
+    {
+      &quot;type&quot;: &quot;blog&quot;
+    }
+  ]
+}
+```
+</code></pre><p>​ 如果您想创建一个"docs"站点，则在顶级<code>_index.md</code>中指定类似以下内容将使所有顶级章节都被视为"文档"，除了"news"：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;My Wonderful Site&quot;
+
+cascade:
+  - type: &quot;blog&quot;
+    toc_root: true
+    _target:
+    path: &quot;/news/**&quot;
+  - type: &quot;docs&quot;
+    _target:
+    path: &quot;/**&quot;
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;My Wonderful Site&quot;
+
+[[cascade]]
+type = &quot;blog&quot;
+toc_root = true
+
+  [cascade._target]
+  path = &quot;/news/**&quot;
+
+[[cascade]]
+type = &quot;docs&quot;
+
+  [cascade._target]
+  path = &quot;/**&quot;
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;My Wonderful Site&quot;,
+  &quot;cascade&quot;: [
+    {
+      &quot;type&quot;: &quot;blog&quot;,
+      &quot;toc_root&quot;: true,
+      &quot;_target&quot;: {
+        &quot;path&quot;: &quot;/news/**&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;docs&quot;,
+      &quot;_target&quot;: {
+        &quot;path&quot;: &quot;/**&quot;
+      }
+    }
+  ]
+}
+```
+</code></pre><p>请注意，这里增加了<code>toc_root</code>。将其设置为<code>true</code>，可以使其被视为站点的单独部分，具有自己的左侧导航菜单。</p><p>​ 使用此技术的示例基于文档的站点可在<a href=https://github.com/gwatts/mostlydocs/>mostly docs</a> repo中找到。</p><h2 id=页面前置元数据>页面前置元数据<a class=td-heading-self-link href=#%e9%a1%b5%e9%9d%a2%e5%89%8d%e7%bd%ae%e5%85%83%e6%95%b0%e6%8d%ae aria-label="Heading self-link"></a></h2><p>​ Hugo站点中的每个页面文件都有元数据前置元数据，告诉Hugo有关页面的信息。您可以在TOML、YAML或JSON中指定页面前置元数据（我们的示例站点和此站点使用YAML）。使用前置元数据指定页面标题、描述、创建日期、链接标题、模板、菜单权重，甚至包括页面使用的任何资源，如图像。您可以在<a href=https://gohugo.io/content-management/front-matter/>前置元数据</a>中查看可能的页面前置元数据的完整列表。</p><p>例如，这是本页面的前置元数据：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;Adding Content&quot;
+linkTitle: &quot;Adding Content&quot;
+weight: 1
+description: &gt;
+    Add different types of content to your Docsy site.
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;Adding Content&quot;
+linkTitle = &quot;Adding Content&quot;
+weight = 1
+description = '''
+Add different types of content to your Docsy site.
+'''
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;Adding Content&quot;,
+  &quot;linkTitle&quot;: &quot;Adding Content&quot;,
+  &quot;weight&quot;: 1,
+  &quot;description&quot;: &quot;Add different types of content to your Docsy site.\n&quot;
+}
+```
+</code></pre><p>​ 你需要提供的最基本的前置元数据是title（标题）：其他的内容都由你决定！然而，如果你没有设置页面weight（权重），你的<a href=https://www.docsy.dev/docs/adding-content/navigation>导航</a>可能会有点混乱。你可能还想包括<code>description</code>，因为 Docsy 使用它来生成搜索引擎使用的mata <code>description</code> 标签。详见<a href=https://www.docsy.dev/docs/adding-content/feedback/#search-engine-optimization-meta-tags>搜索引擎优化（SEO）元标签</a>。</p><h2 id=页面内容和标记>页面内容和标记<a class=td-heading-self-link href=#%e9%a1%b5%e9%9d%a2%e5%86%85%e5%ae%b9%e5%92%8c%e6%a0%87%e8%ae%b0 aria-label="Heading self-link"></a></h2><p>​ 默认情况下，你可以像编写普通的 <a href=https://gohugo.io/content-management/formats/>Markdown 或 HTML 文件</a>一样，在 Docsy 站点上创建页面并添加<a href=https://www.docsy.dev/docs/adding-content/content/#page-frontmatter>页面前置元数据</a>，就像上面描述的那样。从 0.100 版本开始，<a href=https://github.com/yuin/goldmark/>Goldmark</a>是 Hugo 唯一支持的 Markdown 解析器。</p><blockquote><h4 id=提示>提示<a class=td-heading-self-link href=#%e6%8f%90%e7%a4%ba aria-label="Heading self-link"></a></h4><p>如果你之前使用的是在 0.60 版本之前的 Hugo 版本，使用 <a href=https://github.com/russross/blackfriday>BlackFriday</a> 作为 Markdown 解析器，你可能需要对你的站点进行一些小的更改才能与当前的 <code>Goldmark</code> Markdown 解析器一起工作。特别是，如果你克隆了我们的早期示例站点的一个版本，请在 <code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code> 中添加以下内容，以允许 Goldmark 渲染原始 HTML 和 Markdown：</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;markup&quot;: {
+    &quot;goldmark&quot;: {
+      &quot;renderer&quot;: {
+        &quot;unsafe&quot;: true
+      }
+    }
+  }
+}
+```
+</code></pre></blockquote><p>​ 除了标记文本，你还可以使用 Hugo 和 Docsy 的 <a href=https://www.docsy.dev/docs/adding-content/shortcodes>shortcodes</a>（简码）：可重用的 HTML 片段，可以快速构建你的页面。在 <a href=https://www.docsy.dev/docs/adding-content/shortcodes>Docsy Shortcodes</a> 中了解更多关于简码的内容。</p><blockquote><p>注意</p><p>​ Hugo 也支持使用其他标记语言的<a href=https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers>外部解析器作为辅助工具</a>来添加内容。例如，你可以使用 <code>rst2html</code> 作为外部解析器来添加 RST 内容（尽管请注意，这不支持所有 RST 的变体，例如 Sphinx RST）。同样地，你可以使用 <code>asciidoctor</code> 来解析 Asciidoc 文件，或者使用 <code>pandoc</code> 解析其他格式的文件。</p><p>​ 由于你需要安装外部解析器并运行 Hugo 来生成你的站点（例如，你将无法使用 <a href=https://www.docsy.dev/docs/deployment/#deployment-with-netlify>Netlify 的持续部署功能</a>），因此外部解析器可能并不适合与所有部署选项一起使用。此外，添加外部解析器可能会导致构建较大站点时出现性能问题。</p></blockquote><h3 id=处理链接>处理链接<a class=td-heading-self-link href=#%e5%a4%84%e7%90%86%e9%93%be%e6%8e%a5 aria-label="Heading self-link"></a></h3><p>​ Hugo 允许你使用普通的 Markdown 语法指定链接，但请记住，你需要将链接相对于你站点的根 URL 指定，而相对 URL 在你站点生成的 HTML 中不会被 Hugo 更改。</p><p>​ 或者，你可以使用 Hugo 的 helper <a href=https://gohugo.io/content-management/cross-references/>ref 和 relref 简码</a>来创建解析为正确 URL 的内部链接。但是，请注意，如果用户在你生成的站点之外查看你的页面，例如在 GitHub 的 Web UI 中使用渲染的 Markdown 功能，那么你的链接将根本不会出现为链接。</p><p>​ 你可以在 <a href=https://www.docsy.dev/docs/best-practices/site-guidance>Hugo Tips</a> 中找到（或添加！）有关处理 Hugo 链接的技巧和提示。</p><h3 id=内容样式>内容样式<a class=td-heading-self-link href=#%e5%86%85%e5%ae%b9%e6%a0%b7%e5%bc%8f aria-label="Heading self-link"></a></h3><p>​ 我们不强制要求您的页面内容采用任何特定的风格。然而，如果您需要一些关于如何编写和格式化清晰、简洁的技术文档的指导，我们推荐使用<a href=https://developers.google.com/style/>Google开发者文档风格指南</a>，特别是其中的<a href=https://developers.google.com/style/highlights>风格指南要点</a>。</p><h2 id=页面-bundles>页面 bundles<a class=td-heading-self-link href=#%e9%a1%b5%e9%9d%a2-bundles aria-label="Heading self-link"></a></h2><p>​ 您可以将站点页面创建为其所在章节或子章节目录中的独立文件，或者作为包含内容的文件夹，其中内容在文件夹的index页中。为您的页面创建一个文件夹可以让您将图像和其他资源与内容<a href=https://gohugo.io/content-management/page-bundles/>捆绑（bundle）</a>在一起。</p><p>​ 您可以在本站点和我们的示例站点中看到这两种方法的示例。例如，本页面的源代码只是一个独立的文件<code>/content/en/docs/adding-content.md</code>。然而，在本站点中，Docsy简码的源代码位于<code>/content/en/docs/adding-content/shortcodes/index.md</code>，该页面使用的图像资源位于同一个<code>/shortcodes/</code>目录中。在Hugo术语中，这被称为叶子bundle，因为它是一个文件夹，包含了单个站点页面的所有数据，没有任何子页面（并且使用了不带下划线的<code>index.md</code>）。</p><p>​ 您可以在<a href=https://gohugo.io/content-management/page-bundles/>页面Bundles</a>中找到更多有关使用Hugo捆绑管理资源的信息。</p><h2 id=adding-docs-and-blog-posts>Adding docs and blog posts<a class=td-heading-self-link href=#adding-docs-and-blog-posts aria-label="Heading self-link"></a></h2><p>​ 您最常使用的模板可能是<a href=https://github.com/google/docsy/blob/main/layouts/docs/baseof.html><code>docs</code>模板</a>（如本页面所使用的）或非常相似的<a href=https://github.com/google/docsy/blob/main/layouts/blog/baseof.html><code>blog</code> 模板</a>。这两个模板都包括：</p><ul><li>a left nav</li><li>GitHub链接（从您的站点配置中获取）供读者编辑页面或创建问题</li><li>a page menu</li></ul><p>以及所有站点页面都使用的常见页头和页脚。应用哪个模板取决于您是否将内容添加到<code>blog</code>或<code>docs</code>内容目录中。您可以在<a href=https://www.docsy.dev/docs/adding-content/navigation/>导航和搜索</a>中了解有关如何创建导航和页面菜单的更多信息。</p><h3 id=组织您的文档>组织您的文档<a class=td-heading-self-link href=#%e7%bb%84%e7%bb%87%e6%82%a8%e7%9a%84%e6%96%87%e6%a1%a3 aria-label="Heading self-link"></a></h3><p>​ 虽然Docsy的顶级章节允许您为不同类型的内容创建站点章节，但您可能还希望在<code>docs</code>章节内组织您的文档内容。例如，本站点的<code>docs</code>章节目录有多个子目录，用于入门、内容和自定义等。每个子目录都有一个<code>_index.md</code>（也可以是<code>_index.html</code>），它作为一个章节索引页，告诉Hugo相关目录是您的文档的子章节。</p><p>​ Docsy的<code>docs</code>布局为您提供了一个左侧导航窗格，其中包含根据您的文档文件结构自动生成的嵌套菜单。在<code>docs/</code>目录中的每个独立页面或子章节<code>_index.md</code>或<code>_index.html</code>页面都会获得一个顶级菜单项，使用页面或index中的链接名称和<code>weight</code>元数据。</p><p>​ 要向子章节添加文档，只需将页面文件添加到相应的子目录中。除子章节索引页面外，您添加到子章节的任何页面都将出现在子菜单中（请查看左侧以查看实际效果！），并按页面<code>weight</code>排序。在<a href=https://www.docsy.dev/docs/adding-content/navigation/>导航和搜索</a>中了解有关添加Docsy导航元数据的更多信息。</p><p>​ 如果您已经复制了示例站点，则在您的<code>docs</code>目录中已经有一些建议的子目录，并提供了放置何种类型内容以及一些示例Markdown页面的指导。您可以在<a href=https://www.docsy.dev/docs/best-practices/organizing-content/>组织您的内容</a>中了解更多关于使用Docsy组织内容的信息。</p><h4 id=文档章节着陆页面>文档章节着陆页面<a class=td-heading-self-link href=#%e6%96%87%e6%a1%a3%e7%ab%a0%e8%8a%82%e7%9d%80%e9%99%86%e9%a1%b5%e9%9d%a2 aria-label="Heading self-link"></a></h4><p>​ 默认情况下，文档章节着陆页（位于章节目录中的<code>_index.md</code>或<code>_index.html</code>）使用一种布局，该布局添加了一个格式化的链接列表，其中包含章节中的页面及其前置元数据描述。本站点中的<a href=https://www.docsy.dev/docs/adding-content/>内容和自定义</a>着陆页面是一个很好的例子。</p><p>​ 要显示一个简单的链接条目列表，指定在着陆页面的前置元数据中<code>simple_list: true</code>：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;Simple List Page&quot;
+simple_list: true
+weight: 20
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;Simple List Page&quot;
+simple_list = true
+weight = 20
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;Simple List Page&quot;,
+  &quot;simple_list&quot;: true,
+  &quot;weight&quot;: 20
+}
+```
+</code></pre><p>​ 要根本不显示任何链接，请在着陆页面的前置元数据中指定<code>no_list: true</code>：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;No List Page&quot;
+no_list: true
+weight: 20
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;No List Page&quot;
+no_list = true
+weight = 20
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;No List Page&quot;,
+  &quot;no_list&quot;: true,
+  &quot;weight&quot;: 20
+}
+```
+</code></pre><h3 id=组织您的博客文章>组织您的博客文章<a class=td-heading-self-link href=#%e7%bb%84%e7%bb%87%e6%82%a8%e7%9a%84%e5%8d%9a%e5%ae%a2%e6%96%87%e7%ab%a0 aria-label="Heading self-link"></a></h3><p>​ Docsy的<code>blog</code>布局也为您提供了一个左侧导航菜单（如<code>docs</code>布局），以及应用于<code>/blog/_index.md</code>的列表类型index 页，自动按反向时间顺序显示所有最新文章的片段。</p><p>To create different blog categories to organize your posts, create subfolders in <code>blog/</code>. For instance, in our <a href=https://github.com/google/docsy-example/tree/master/content/en/blog>example site</a> we have <code>news</code> and <code>releases</code>. Each category needs to have its own <code>_index.md</code> or <code>_index.html</code> landing page file specifying the category title for it to appear properly in the left nav and top-level blog landing page. Here’s the index page for <code>releases</code>:</p><p>​ 要创建不同的博客类别以组织您的文章，请在<code>blog/</code>中创建子文件夹。例如，在我们的<a href=https://github.com/google/docsy-example/tree/master/content/en/blog>示例站点</a>中，我们有<code>news</code>和<code>releases</code>。每个类别都需要有自己的<code>_index.md</code>或<code>_index.html</code>着陆页面文件，指定类别标题以使其在左侧导航和顶级博客着陆页面上正确显示。这是<code>releases</code>的index 页面：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;New Releases&quot;
+linkTitle: &quot;Releases&quot;
+weight: 20
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;New Releases&quot;
+linkTitle = &quot;Releases&quot;
+weight = 20
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;New Releases&quot;,
+  &quot;linkTitle&quot;: &quot;Releases&quot;,
+  &quot;weight&quot;: 20
+}
+```
+</code></pre><p>​ 要向博客文章添加作者和日期信息，请将它们添加到页面的前置元数据中：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+date: 2018-10-06
+title: &quot;Easy documentation with Docsy&quot;
+linkTitle: &quot;Announcing Docsy&quot;
+description: &quot;The Docsy Hugo theme lets project maintainers and contributors focus on content, not on reinventing a website infrastructure from scratch&quot;
+author: Riona MacNamara
+resources:
+  - src: &quot;**.{png,jpg}&quot;
+    title: &quot;Image #:counter&quot;
+    params:
+    byline: &quot;Photo: Riona MacNamara / CC-BY-CA&quot;
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+date = 2018-10-06T00:00:00.000Z
+title = &quot;Easy documentation with Docsy&quot;
+linkTitle = &quot;Announcing Docsy&quot;
+description = &quot;The Docsy Hugo theme lets project maintainers and contributors focus on content, not on reinventing a website infrastructure from scratch&quot;
+author = &quot;Riona MacNamara&quot;
+
+[[resources]]
+src = &quot;**.{png,jpg}&quot;
+title = &quot;Image #:counter&quot;
+
+  [resources.params]
+  byline = &quot;Photo: Riona MacNamara / CC-BY-CA&quot;
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;date&quot;: &quot;2018-10-06T00:00:00.000Z&quot;,
+  &quot;title&quot;: &quot;Easy documentation with Docsy&quot;,
+  &quot;linkTitle&quot;: &quot;Announcing Docsy&quot;,
+  &quot;description&quot;: &quot;The Docsy Hugo theme lets project maintainers and contributors focus on content, not on reinventing a website infrastructure from scratch&quot;,
+  &quot;author&quot;: &quot;Riona MacNamara&quot;,
+  &quot;resources&quot;: [
+    {
+      &quot;src&quot;: &quot;**.{png,jpg}&quot;,
+      &quot;title&quot;: &quot;Image #:counter&quot;,
+      &quot;params&quot;: {
+        &quot;byline&quot;: &quot;Photo: Riona MacNamara / CC-BY-CA&quot;
+      }
+    }
+  ]
+}
+```
+</code></pre><p>​ 如果您已经复制了示例站点，并且不想要blog 章节，或者想链接到外部博客，只需删除<code>blog</code>子目录即可。</p><h2 id=working-with-top-level-landing-pages-使用顶级着陆页面>Working with top-level landing pages. 使用顶级着陆页面<a class=td-heading-self-link href=#working-with-top-level-landing-pages-%e4%bd%bf%e7%94%a8%e9%a1%b6%e7%ba%a7%e7%9d%80%e9%99%86%e9%a1%b5%e9%9d%a2 aria-label="Heading self-link"></a></h2><p>​ Docsy的<a href=https://github.com/google/docsy/blob/main/layouts/docs/baseof.html>默认页面模板</a>没有左侧导航，适用于为您的站点或其他"着陆"类型页面创建主页。</p><h3 id=自定义示例站点页面>自定义示例站点页面<a class=td-heading-self-link href=#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%a4%ba%e4%be%8b%e7%ab%99%e7%82%b9%e9%a1%b5%e9%9d%a2 aria-label="Heading self-link"></a></h3><p>​ 如果你已经复制了示例站点，那么在 <code>content/en/_index.html</code> 文件中你已经有了一个简单的站点着陆页。它由 Docsy 提供的 Hugo shortcode <a href=https://www.docsy.dev/docs/adding-content/shortcodes/#shortcode-blocks>页面块</a>组成。</p><p>​ 要自定义大的着陆图片（在一个<a href=https://www.docsy.dev/docs/adding-content/shortcodes/#blockscover>封面（cover）</a>块中），请将项目中的 <code>content/en/featured-background.jpg</code> 文件替换为你自己的图片（文件名中必须包含<code>background</code>），你可以添加或删除尽可能多的块，以及添加你自己的内容。</p><p>​ 示例站点还有一个About 页面，在 <code>content/en/about/_index.html</code> 中使用相同的 Docsy 模板。同样，它由<a href=https://www.docsy.dev/docs/adding-content/shortcodes/#shortcode-blocks>页面块</a>组成，包括 <code>content/en/about/featured-background.jpg</code> 中的另一个背景图片。与站点着陆页一样，你可以替换图片、删除或添加块，或者添加你自己的内容。</p><h3 id=构建你自己的着陆页>构建你自己的着陆页<a class=td-heading-self-link href=#%e6%9e%84%e5%bb%ba%e4%bd%a0%e8%87%aa%e5%b7%b1%e7%9a%84%e7%9d%80%e9%99%86%e9%a1%b5 aria-label="Heading self-link"></a></h3><p>​ 如果你刚刚使用了这个主题，你仍然可以使用所有 Docsy 提供的<a href=https://www.docsy.dev/docs/adding-content/shortcodes/#shortcode-blocks>页面块</a>（或任何其他你想要的内容）在相同的文件位置构建自己的着陆页。</p><h2 id=添加community-页面>添加community 页面<a class=td-heading-self-link href=#%e6%b7%bb%e5%8a%a0community-%e9%a1%b5%e9%9d%a2 aria-label="Heading self-link"></a></h2><p>​ <code>community</code>着陆页模板有样板内容，自动填充项目名称和在 <code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code> 中指定的社区链接，为你的用户提供快速访问资源的链接，帮助他们参与你的项目。同样的链接也默认添加到你的站点页脚。</p><p>Configuration file:</p><p>=== &ldquo;hugo.yaml&rdquo;</p><pre><code>```yaml
+params:
+  links:
+    user:
+      - name: User mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discussion and help from your fellow users
+      - name: Twitter
+        url: 'https://example.org/twitter'
+        icon: fab fa-twitter
+        desc: Follow us on Twitter to get the latest news!
+      - name: Stack Overflow
+        url: 'https://example.org/stack'
+        icon: fab fa-stack-overflow
+        desc: Practical questions and curated answers
+    developer:
+      - name: GitHub
+        url: 'https://github.com/google/docsy'
+        icon: fab fa-github
+        desc: Development takes place here!
+      - name: Slack
+        url: 'https://example.org/slack'
+        icon: fab fa-slack
+        desc: Chat with other project developers
+      - name: Developer mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discuss development issues around the project
+```
+</code></pre><p>=== &ldquo;hugo.toml&rdquo;</p><pre><code>```toml
+[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = &quot;User mailing list&quot;
+	url = &quot;https://example.org/mail&quot;
+	icon = &quot;fa fa-envelope&quot;
+        desc = &quot;Discussion and help from your fellow users&quot;
+[[params.links.user]]
+	name =&quot;Twitter&quot;
+	url = &quot;https://example.org/twitter&quot;
+	icon = &quot;fab fa-twitter&quot;
+        desc = &quot;Follow us on Twitter to get the latest news!&quot;
+[[params.links.user]]
+	name = &quot;Stack Overflow&quot;
+	url = &quot;https://example.org/stack&quot;
+	icon = &quot;fab fa-stack-overflow&quot;
+        desc = &quot;Practical questions and curated answers&quot;
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+	name = &quot;GitHub&quot;
+	url = &quot;https://github.com/google/docsy&quot;
+	icon = &quot;fab fa-github&quot;
+        desc = &quot;Development takes place here!&quot;
+[[params.links.developer]]
+	name = &quot;Slack&quot;
+	url = &quot;https://example.org/slack&quot;
+	icon = &quot;fab fa-slack&quot;
+        desc = &quot;Chat with other project developers&quot;
+[[params.links.developer]]
+	name = &quot;Developer mailing list&quot;
+	url = &quot;https://example.org/mail&quot;
+	icon = &quot;fa fa-envelope&quot;
+        desc = &quot;Discuss development issues around the project&quot;
+```
+</code></pre><p>=== &ldquo;hugo.json&rdquo;</p><pre><code>```json
+{
+  &quot;params&quot;: {
+    &quot;links&quot;: {
+      &quot;user&quot;: [
+        {
+          &quot;name&quot;: &quot;User mailing list&quot;,
+          &quot;url&quot;: &quot;https://example.org/mail&quot;,
+          &quot;icon&quot;: &quot;fa fa-envelope&quot;,
+          &quot;desc&quot;: &quot;Discussion and help from your fellow users&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Twitter&quot;,
+          &quot;url&quot;: &quot;https://example.org/twitter&quot;,
+          &quot;icon&quot;: &quot;fa-brands fa-twitter&quot;,
+          &quot;desc&quot;: &quot;Follow us on Twitter to get the latest news!&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Stack Overflow&quot;,
+          &quot;url&quot;: &quot;https://example.org/stack&quot;,
+          &quot;icon&quot;: &quot;fa-brands fa-stack-overflow&quot;,
+          &quot;desc&quot;: &quot;Practical questions and curated answers&quot;
+        }
+      ],
+      &quot;developer&quot;: [
+        {
+          &quot;name&quot;: &quot;GitHub&quot;,
+          &quot;url&quot;: &quot;https://github.com/google/docsy&quot;,
+          &quot;icon&quot;: &quot;fa-brands fa-github&quot;,
+          &quot;desc&quot;: &quot;Development takes place here!&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Slack&quot;,
+          &quot;url&quot;: &quot;https://example.org/slack&quot;,
+          &quot;icon&quot;: &quot;fa-brands fa-slack&quot;,
+          &quot;desc&quot;: &quot;Chat with other project developers&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Developer mailing list&quot;,
+          &quot;url&quot;: &quot;https://example.org/mail&quot;,
+          &quot;icon&quot;: &quot;fa fa-envelope&quot;,
+          &quot;desc&quot;: &quot;Discuss development issues around the project&quot;
+        }
+      ]
+    }
+  }
+}
+```
+</code></pre><p>​ 如果你正在创建自己的站点，想要使用这个模板添加页面，请在你的内容根目录中添加一个 <code>/community/_index.md</code> 文件。如果你复制了示例站点，并不想要一个社区页面，请在项目存储库中删除 <code>/content/en/community/</code> 目录。</p><h2 id=添加静态内容>添加静态内容<a class=td-heading-self-link href=#%e6%b7%bb%e5%8a%a0%e9%9d%99%e6%80%81%e5%86%85%e5%ae%b9 aria-label="Heading self-link"></a></h2><p>​ 你可能想要将一些非 Hugo 构建的内容与你的站点一起提供：例如，如果你使用 Doxygen、Javadoc 或其他文档生成工具生成参考文档。</p><p>​ 要添加静态内容以"原样（as-is）&ldquo;提供，请在站点的 <code>static</code> 目录中添加文件夹和/或文件。在部署站点时，该目录中的内容将在站点根路径下提供服务。因此，例如，如果你在 <code>/static/reference/cpp/</code> 添加了内容，用户可以在 <code>http://{server-url}/reference/cpp/</code> 访问该内容，你可以从其他页面在 <code>/reference/cpp/{file name}</code> 上链接到该目录中的页面。</p><p>​ 你还可以在该目录中使用你的项目使用的其他文件，包括图像文件。你可以在<a href=https://gohugo.io/content-management/static-files/>静态文件</a>中了解更多关于提供静态文件的信息，包括配置多个静态内容目录。</p><h2 id=rss-订阅>RSS 订阅<a class=td-heading-self-link href=#rss-%e8%ae%a2%e9%98%85 aria-label="Heading self-link"></a></h2><p>​ Hugo 默认会为主页和任何章节创建一个 RSS 订阅。对于主 RSS 订阅，你可以通过设置 <code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code> 中的站点参数来控制包含哪些章节。这是默认配置：</p><p>Configuration file:</p><p>=== &ldquo;hugo.yaml&rdquo;</p><pre><code>```yaml
+rss_sections:
+  - blog
+```
+</code></pre><p>=== &ldquo;hugo.toml&rdquo;</p><pre><code>```toml
+rss_sections = [&quot;blog&quot;]
+```
+</code></pre><p>=== &ldquo;hugo.json&rdquo;</p><pre><code>```json
+{
+  &quot;rss_sections&quot;: [
+    &quot;blog&quot;
+  ]
+}
+```
+</code></pre><p>​ 要禁用所有RSS订阅，请在<code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code>中添加以下内容：</p><p>Configuration file:</p><p>=== &ldquo;hugo.yaml&rdquo;</p><pre><code>```yaml
+disableKinds:
+  - RSS
+```
+</code></pre><p>=== &ldquo;hugo.toml&rdquo;</p><pre><code>```toml
+disableKinds = [&quot;RSS&quot;]
+```
+</code></pre><p>=== &ldquo;hugo.json&rdquo;</p><pre><code>```json
+{
+  &quot;disableKinds&quot;: [
+    &quot;RSS&quot;
+  ]
+}
+```
+</code></pre><blockquote><p>注意</p><p>​ 如果您已启用我们的<a href=https://www.docsy.dev/docs/adding-content/print/>打印功能</a>或以其他方式在<code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code>中指定了章节级别的输出格式，请确保"RSS"被列为输出格式，否则您将无法获得章节级别的RSS订阅（并且您的博客章节将不会有漂亮的橙色RSS按钮）。您的<code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code> 规范将覆盖Hugo用于章节的默认<a href=https://gohugo.io/templates/output-formats/>输出格式</a>，这些格式为HTML和RSS。</p><p>Configuration file:</p><p>=== &ldquo;hugo.yaml&rdquo;</p><pre><code>```yaml
+outputs:
+  section:
+    - HTML
+    - RSS
+    - print
+```
+</code></pre><p>=== &ldquo;hugo.toml&rdquo;</p><pre><code>```toml
+[outputs]
+section = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;print&quot; ]
+```
+</code></pre><p>=== &ldquo;hugo.json&rdquo;</p><pre><code>```json
+{
+  &quot;outputs&quot;: {
+    &quot;section&quot;: [
+      &quot;HTML&quot;,
+      &quot;RSS&quot;,
+      &quot;print&quot;
+    ]
+  }
+}
+```
+</code></pre></blockquote><h2 id=sitemap>Sitemap<a class=td-heading-self-link href=#sitemap aria-label="Heading self-link"></a></h2><p>​ Hugo默认为您的生成站点创建<code>sitemap.xml</code>文件：例如，这是<a href=https://www.docsy.dev/sitemap.xml>本站的sitemap</a>。</p><p>​ 您可以在<code>hugo.toml</code>/<code>hugo.yaml</code>/<code>hugo.json</code>中配置您的sitemap更新频率、sitemap文件名和默认页面优先级：</p><p>Configuration file:</p><p>=== &ldquo;hugo.yaml&rdquo;</p><pre><code>```yaml
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+```
+</code></pre><p>=== &ldquo;hugo.toml&rdquo;</p><pre><code>```toml
+[sitemap]
+  changefreq = &quot;monthly&quot;
+  filename = &quot;sitemap.xml&quot;
+  priority = 0.5
+```
+</code></pre><p>=== &ldquo;hugo.json&rdquo;</p><pre><code>```json
+{
+  &quot;sitemap&quot;: {
+    &quot;changefreq&quot;: &quot;monthly&quot;,
+    &quot;filename&quot;: &quot;sitemap.xml&quot;,
+    &quot;priority&quot;: 0.5
+  }
+}
+```
+</code></pre><p>​ 要为给定页面覆盖这些值，请在页面的前置元数据中指定：</p><p>Front matter:</p><p>=== &ldquo;yaml&rdquo;</p><pre><code>```yaml
+---
+title: &quot;Adding Content&quot;
+linkTitle: &quot;Adding Content&quot;
+weight: 1
+description: &gt;
+    Add different types of content to your Docsy site.
+sitemap:
+  priority: 1.0
+---
+```
+</code></pre><p>=== &ldquo;toml&rdquo;</p><pre><code>```toml
++++
+title = &quot;Adding Content&quot;
+linkTitle = &quot;Adding Content&quot;
+weight = 1
+description = '''
+Add different types of content to your Docsy site.
+'''
+[sitemap]
+priority = 1
++++
+```
+</code></pre><p>=== &ldquo;json&rdquo;</p><pre><code>```json
+{
+  &quot;title&quot;: &quot;Adding Content&quot;,
+  &quot;linkTitle&quot;: &quot;Adding Content&quot;,
+  &quot;weight&quot;: 1,
+  &quot;description&quot;: &quot;Add different types of content to your Docsy site.\n&quot;,
+  &quot;sitemap&quot;: {
+    &quot;priority&quot;: 1
+  }
+}
+```
+</code></pre><p>​ 要了解有关配置站点地图的更多信息，请参阅<a href=https://gohugo.io/templates/sitemap-template/>Sitemap模板</a>。</p><style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style><div class=d-print-none><h2 class=feedback--title>Feedback</h2><p class=feedback--question>Was this page helpful?</p><button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">是</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">否</button><p class="feedback--response feedback--response-yes">Glad to hear it! Please <a href=https://github.com/onxs/docs/issues/new>tell us how we can improve</a>.</p><p class="feedback--response feedback--response-no">Sorry to hear that. Please <a href=https://github.com/onxs/docs//issues/new>tell us how we can improve</a>.</p></div><script>const yesButton=document.querySelector(".feedback--answer-yes"),noButton=document.querySelector(".feedback--answer-no"),yesResponse=document.querySelector(".feedback--response-yes"),noResponse=document.querySelector(".feedback--response-no"),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=e=>{if(typeof gtag!="function")return;gtag("event","page_helpful",{event_category:"Helpful",event_label:window.location.pathname,value:e})};yesButton.addEventListener("click",()=>{yesResponse.classList.add("feedback--response__visible"),disableButtons(),sendFeedback(100)}),noButton.addEventListener("click",()=>{noResponse.classList.add("feedback--response__visible"),disableButtons(),sendFeedback(0)})</script><br><div class=td-page-meta__lastmod>最后修改 July 2, 2024: <a href=https://github.com/onxs/doc/commit/f447ac5bf184126ced528c1fad39306fb45d14a0>zh (f447ac5)</a></div></div></main></div></div><footer class="td-footer row d-print-none"><div class=container-fluid><div class="row mx-md-2"><div class="td-footer__left col-6 col-sm-4 order-sm-1"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title="User mailing list" aria-label="User mailing list"><a target=_blank rel=noopener href=https://mail.qq.com/ aria-label="User mailing list"><i class="fa fa-envelope"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Twitter aria-label=Twitter><a target=_blank rel=noopener href=https://twitter.com/ aria-label=Twitter><i class="fab fa-twitter"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Stack Overflow" aria-label="Stack Overflow"><a target=_blank rel=noopener href=https://stackoverflow.co/ aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a></li></ul></div><div class="td-footer__right col-6 col-sm-4 order-sm-3"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title=GitHub aria-label=GitHub><a target=_blank rel=noopener href=https://github.com/onxs aria-label=GitHub><i class="fab fa-github"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Slack aria-label=Slack><a target=_blank rel=noopener href=https://slack.com/intl/zh-cn/ aria-label=Slack><i class="fab fa-slack"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Developer mailing list" aria-label="Developer mailing list"><a target=_blank rel=noopener href=https://mail.qq.com/ aria-label="Developer mailing list"><i class="fa fa-envelope"></i></a></li></ul></div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2"><span class=td-footer__copyright>&copy;
+2024
+<span class=td-footer__authors>Docsy | <a href=https://creativecommons.org/licenses/by/4.0>CC BY 4.0</a> |</span></span><span class=td-footer__all_rights_reserved>保留所有权利</span><span class=ms-2><a href=https://policies.google.com/privacy target=_blank rel=noopener>隐私政策</a></span></div></div></div></footer></div><script src=/js/main.min.f72d00502781aaf278a14088eb2356b1ba2a05ad698a0c43fe86314d74ceab56.js integrity="sha256-9y0AUCeBqvJ4oUCI6yNWsboqBa1pigxD/oYxTXTOq1Y=" crossorigin=anonymous></script><script src=/js/prism.js></script><script src=/js/tabpane-persist.js></script></body></html>
