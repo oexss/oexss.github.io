@@ -24,17 +24,17 @@ Bootstrap. The post starts with general guidance for Docsy-based projects
 wishing to upgrade. Every project&rsquo;s migration experience will be unique, but
 hopefully this post, and the two included case studies, will make your upgrade
 process easier and faster.</p><p>If you&rsquo;re here, you probably want to upgrade your Docsy-based project&mdash;so,
-let&rsquo;s jump in!</p><h2 id=upgrading-your-project>Upgrading your project</h2><p>As was mentioned in the
+let&rsquo;s jump in!</p><h2 id=upgrading-your-project>Upgrading your project<a class=td-heading-self-link href=#upgrading-your-project aria-label="Heading self-link"></a></h2><p>As was mentioned in the
 <a href=/en/blog/2023/06/05/migrating-to-bootstrap-5.2/#migrating-docsy-based-projects>first post</a>,
 each project uses its own specific set of Bootstrap and Docsy features, so in
 all likelihood, <strong>your upgrade journey will be unique</strong>. This section offers
-some general guidance.</p><h3 id=upgrade-docsy>Upgrade Docsy</h3><p>If you haven&rsquo;t already, upgrade your project all the way up to Docsy 0.6 first.
+some general guidance.</p><h3 id=upgrade-docsy>Upgrade Docsy<a class=td-heading-self-link href=#upgrade-docsy aria-label="Heading self-link"></a></h3><p>If you haven&rsquo;t already, upgrade your project all the way up to Docsy 0.6 first.
 Each release of Docsy can bring its own set of upgrade challenges that will vary
 in size and effort depending on your project and the features it uses, as well
 as how long it&rsquo;s been since your version of Docsy has been upgraded. You&rsquo;ll want
 to get all pre-0.7 upgrade issues out of the way so that you can focus on
 Bootstrap 5 issues. Once you are done, upgrade to the latest Docsy 0.7.x
-release.</p><h3 id=address-bootstrap-changes>Address Bootstrap changes</h3><p>I recommend that you first walk through the Bootstrap 5.2
+release.</p><h3 id=address-bootstrap-changes>Address Bootstrap changes<a class=td-heading-self-link href=#address-bootstrap-changes aria-label="Heading self-link"></a></h3><p>I recommend that you first walk through the Bootstrap 5.2
 <a href=https://getbootstrap.com/docs/5.2/migration/>migration page</a> to get an
 appreciation of the scope of the changes made to Bootstrap 5 relative to 4.
 Identify the breaking changes to those Bootstrap features used by your project,
@@ -63,13 +63,13 @@ hasn&rsquo;t been mentioned above, you might find the opening comment of Docsy
 <a href=https://github.com/google/docsy/issues/470>issue #470 · Upgrade to Bootstrap 5.2</a>
 useful: it lists 50 tasks, each addressing a distinct migration problem,
 accompanied by notes or cross-referenced PRs that illustrate how each problem
-was resolved.</p><h3 id=address-docsy-specific-changes>Address Docsy-specific changes</h3><p>It is worth mentioning in passing some of the main Docsy 0.7 changes that aren&rsquo;t
+was resolved.</p><h3 id=address-docsy-specific-changes>Address Docsy-specific changes<a class=td-heading-self-link href=#address-docsy-specific-changes aria-label="Heading self-link"></a></h3><p>It is worth mentioning in passing some of the main Docsy 0.7 changes that aren&rsquo;t
 related to Bootstrap, such as:</p><ul><li>Default and accepted values of the <code>blocks/section</code>&rsquo;s <code>type</code> argument have
 changed (<a href=https://github.com/google/docsy/issues/1472>#1472</a>)</li><li>Pre-Hugo-0.54.x behavior of <code>{{% %}}</code> is no longer supported
 (<a href=https://github.com/google/docsy/issues/939>#939</a>)</li><li><a href=https://github.com/gohugoio/hugo/releases>Hugo release</a> 0.110.0 or later is
 required</li></ul><p>For the complete list of changes, see the
-<a href=https://github.com/google/docsy/blob/main/CHANGELOG.md#070>CHANGELOG at 0.7.0</a>.</p><h2 id=case-studies>Case studies</h2><p>Our two case study projects to illustrate the Docsy upgrade process are the
-OpenTelemetry project and the Docsy example template repository.</p><h3 id=opentelemetryio>opentelemetry.io</h3><p><a href=https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/>Several CNCF projects</a>
+<a href=https://github.com/google/docsy/blob/main/CHANGELOG.md#070>CHANGELOG at 0.7.0</a>.</p><h2 id=case-studies>Case studies<a class=td-heading-self-link href=#case-studies aria-label="Heading self-link"></a></h2><p>Our two case study projects to illustrate the Docsy upgrade process are the
+OpenTelemetry project and the Docsy example template repository.</p><h3 id=opentelemetryio>opentelemetry.io<a class=td-heading-self-link href=#opentelemetryio aria-label="Heading self-link"></a></h3><p><a href=https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/>Several CNCF projects</a>
 use the Docsy theme, including <a href=https://opentelemetry.io/>opentelemetry.io</a>,
 which I used as a Docsy pre-release test site. As suggested earlier, I first
 upgraded Docsy from 0.4 to 0.6
@@ -83,7 +83,7 @@ significant rework of the
 <a href=https://opentelemetry.io/ecosystem/registry/>Registry</a> form</li><li>While the OTel website has no blog layout overrides, it made use of the
 <code>.media</code> class (which was dropped) for registry entries. Flex styles were used
 instead.</li></ul><p>That&rsquo;s it! To see how both of the above were resolved, see OTel
-<a href=https://github.com/open-telemetry/opentelemetry.io/pull/2490>PR #2490</a>.</p><h3 id=docsy-example>Docsy-example</h3><p>The <a href=https://github.com/google/docsy-example>docsy-example</a> repository is a
+<a href=https://github.com/open-telemetry/opentelemetry.io/pull/2490>PR #2490</a>.</p><h3 id=docsy-example>Docsy-example<a class=td-heading-self-link href=#docsy-example aria-label="Heading self-link"></a></h3><p>The <a href=https://github.com/google/docsy-example>docsy-example</a> repository is a
 <a href=https://gitprotect.io/blog/how-to-use-github-repository-templates/>GitHub template</a>
 that we suggest as a possible starting point for users looking to adopt
 <a href=/en/docs/get-started/docsy-as-module/example-site-as-template/>Docsy for a new website</a>.
@@ -93,7 +93,7 @@ changes (<a href=https://github.com/google/docsy-example/pull/221>PR #221</a>) w
 mainly confined to the landing page of each natural language:</p><ul><li>Utility-class renames, such as <code>.ml-*</code> and <code>.mr-*</code> to <code>.ms-*</code> and <code>.me-*</code></li><li><a href=/en/docs/adding-content/shortcodes/#blockssection>blocks/section</a> changes
 (<a href=https://github.com/google/docsy/pull/1472>PR #1472</a>):<ul><li>Language landing pages had to be renamed from <code>.html</code> to <code>.md</code> in support of
 using blocks shortcodes to render markdown content</li><li>Switched to <code>type="row"</code> for <code>blocks/section</code> elements that are rows (also
-from <a href=https://github.com/google/docsy-example/pull/220>PR #220</a>)</li></ul></li></ul><p>That was it.</p><h2 id=what-next>What next?</h2><p>If your project doesn&rsquo;t override any Docsy layouts, then your upgrade experience
+from <a href=https://github.com/google/docsy-example/pull/220>PR #220</a>)</li></ul></li></ul><p>That was it.</p><h2 id=what-next>What next?<a class=td-heading-self-link href=#what-next aria-label="Heading self-link"></a></h2><p>If your project doesn&rsquo;t override any Docsy layouts, then your upgrade experience
 should be relatively straightforward. Reviewing layout file changes, on the
 other hand, always warrants special attention.</p><p>With the tips shared here, I hope that your journey to Docsy 0.7 will be more
 streamlined. Consider sharing your experiences by adding a comment to the
