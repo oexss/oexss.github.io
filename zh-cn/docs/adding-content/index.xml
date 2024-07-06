@@ -66,4 +66,4 @@ Configuration file: hugo.</description></item><item><title>图表和公式</titl
 内联公式 ​ 以下代码示例生成一个带有三个内联公式的文本行：
 When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c= 0\\) and they are \\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\). When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c= 0\) and they are \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
 显示模式的公式 ​ 以下代码示例生成一个介绍性文本行，后跟一个编号为(1)的单独行上的公式：
-The probability of getting \\(k\\) heads when flipping \\(n\\) coins is: ```math \tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k} ``` Warning math 代码块仅在 Hugo 版本 0.</description></item></channel></rss>
+The probability of getting \(k\) heads when flipping \(n\) coins is:</description></item></channel></rss>

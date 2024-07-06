@@ -134,7 +134,7 @@ Configuration file: hugo.</description></item><item><title>图表和公式</titl
 内联公式 ​ 以下代码示例生成一个带有三个内联公式的文本行：
 When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c= 0\\) and they are \\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\). When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c= 0\) and they are \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
 显示模式的公式 ​ 以下代码示例生成一个介绍性文本行，后跟一个编号为(1)的单独行上的公式：
-The probability of getting \\(k\\) heads when flipping \\(n\\) coins is: ```math \tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k} ``` Warning math 代码块仅在 Hugo 版本 0.</description></item><item><title>废都</title><link>https://t.is-local.org/zh-cn/blog/2024/03/18/%E5%BA%9F%E9%83%BD/</link><pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/blog/2024/03/18/%E5%BA%9F%E9%83%BD/</guid><description>前言 石遗
+The probability of getting \(k\) heads when flipping \(n\) coins is:</description></item><item><title>废都</title><link>https://t.is-local.org/zh-cn/blog/2024/03/18/%E5%BA%9F%E9%83%BD/</link><pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/blog/2024/03/18/%E5%BA%9F%E9%83%BD/</guid><description>前言 石遗
 废都曾经是一本很轰动的小说。那时的贾平凹也是最具人气的贾平凹，比而今的星们可牛多了。
 很有人说《废都》是现代的《金瓶梅》。我不知道怎么去评说，反正我都喜欢。初次看金瓶梅是在乡下一老人那里借得，很纯粹的洁本，删节很多。那时年轻，没见过几本书，知道机会很难得，我摘录了些俗语、诗词和对联。那时的感觉，比较红楼梦而言，我更看好金瓶梅。大约是生活在底层的缘故，金瓶梅反映的社会面更广些，更现实些；而红楼梦雅了，看不很懂吧，或者离我们底层人的生活太遥远。
 看废都是因为那时炒作得很凶。在文化市场买的，大约是盗版罢。（我那时很不如意地念着书，节省早点钱，礼拜天在文化市场转悠，每每花一两元买本旧而未经看过的好书。）起初是猎奇，翻翻，不经意间就被那老练而不经意的文字吸引了。好的小说，不在于它写的什么，只在于写得怎样。
