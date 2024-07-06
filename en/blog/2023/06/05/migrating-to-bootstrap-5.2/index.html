@@ -29,21 +29,21 @@ and focused our maintenance efforts on the Bootstrap 5 migration.</p><p>This pos
 it highlights the most notable steps, with a special attention given to the most
 surprising aspects of the migration. Our hope is that this post will be useful
 to others upgrading to Bootstrap 5, in particular, for downstream Docsy projects
-&mdash; though we plan a separate post specifically for downstream projects.</p><h2 id=tldr>TL;DR<a class=td-heading-self-link href=#tldr aria-label="Heading self-link"></a></h2><p>Eager to dive into the Bootstrap migration of your project? Besides carefully
+&mdash; though we plan a separate post specifically for downstream projects.</p><h2 id=tldr>TL;DR</h2><p>Eager to dive into the Bootstrap migration of your project? Besides carefully
 stepping through the
 <a href=https://getbootstrap.com/docs/5.2/migration/>Bootstrap migration page</a>, watch
-out for the following:</p><ul><li>The <code>media-breakpoint-down()</code> mixin&rsquo;s breakpoint argument needs to be shifted.</li><li>Grid <code>.row</code> and <code>.col</code> style changes are breaking.</li><li>Import ordering of Bootstrap Sass files: import functions first.</li></ul><p>For details, read on.</p><h2 id=technical-details>Technical details<a class=td-heading-self-link href=#technical-details aria-label="Heading self-link"></a></h2><p>If you are well accustomed to upgrading Docsy (and its dependencies) by reading
+out for the following:</p><ul><li>The <code>media-breakpoint-down()</code> mixin&rsquo;s breakpoint argument needs to be shifted.</li><li>Grid <code>.row</code> and <code>.col</code> style changes are breaking.</li><li>Import ordering of Bootstrap Sass files: import functions first.</li></ul><p>For details, read on.</p><h2 id=technical-details>Technical details</h2><p>If you are well accustomed to upgrading Docsy (and its dependencies) by reading
 changelogs and systematically stepping through commits, then this section
 provides a summary of some notable changes. In it, I describe technical aspects
 of the migration that surprised me, either because they required particular care
 in fixing, were undocumented, and/or insufficiently explained in the Bootstrap
-<a href=https://getbootstrap.com/docs/5.2/migration/>migration page</a>.</p><h3 id=mixin-media-breakpoint-down-argument-shift>Mixin <code>media-breakpoint-down()</code> argument shift<a class=td-heading-self-link href=#mixin-media-breakpoint-down-argument-shift aria-label="Heading self-link"></a></h3><p>The <a href=https://getbootstrap.com/docs/5.2/layout/breakpoints>breakpoint</a> argument
+<a href=https://getbootstrap.com/docs/5.2/migration/>migration page</a>.</p><h3 id=mixin-media-breakpoint-down-argument-shift>Mixin <code>media-breakpoint-down()</code> argument shift</h3><p>The <a href=https://getbootstrap.com/docs/5.2/layout/breakpoints>breakpoint</a> argument
 to the <code>media-breakpoint-down()</code> mixin needs to be bumped up to the next higher
 breakpoint. Thankfully, a similar change isn&rsquo;t required of
 <code>media-breakpoint-up()</code>. This change will be required of Docsy-based projects.
 If you forget to make this non-obviously breaking layout change, your project&rsquo;s
 responsive layouts will likely start misbehaving in apparently strange ways.</p><p>For details and an example, see:</p><ul><li><a href=https://getbootstrap.com/docs/5.2/migration/#sass>Sass</a> section of the
-migration page</li><li><a href=https://github.com/google/docsy/pull/1367>[BSv5] Adjust <code>media-breakpoint-down()</code> argument · Docsy PR #1367</a></li></ul><h3 id=grid-row-and-col-style-changes-are-breaking>Grid <code>.row</code> and <code>.col</code> style changes are breaking<a class=td-heading-self-link href=#grid-row-and-col-style-changes-are-breaking aria-label="Heading self-link"></a></h3><p>The main issue addressed in this section is not, at the time of writing,
+migration page</li><li><a href=https://github.com/google/docsy/pull/1367>[BSv5] Adjust <code>media-breakpoint-down()</code> argument · Docsy PR #1367</a></li></ul><h3 id=grid-row-and-col-style-changes-are-breaking>Grid <code>.row</code> and <code>.col</code> style changes are breaking</h3><p>The main issue addressed in this section is not, at the time of writing,
 documented in the Bootstrap 5
 <a href=https://getbootstrap.com/docs/5.2/migration>migration page</a>.</p><p>There seems to be an assumption, in Bootstrap 5, that the immediate child of a
 .<code>row</code> should be a <code>.col</code>. I don&rsquo;t know how strict an assumption this is. While
@@ -71,7 +71,7 @@ is overridden and
 <a href=https://github.com/twbs/bootstrap/pull/28517/files#diff-41667d8b9901aa9fa52483b538bb9026c287f2c663d2fdc01acffa06888cc087R18>set to 0</a></li></ul><p>References:</p><ul><li><a href=https://github.com/google/docsy/issues/1466>[BSv5] Row/col formatting breaks Docsy components #1466</a>,
 in particular<ul><li><a href=https://github.com/google/docsy/pull/1373>[BSv5] Footer fixes: reset flex-shrink, and more·</a>
 <a href=https://github.com/google/docsy/pull/1367>Docsy PR</a><a href=https://github.com/google/docsy/pull/1373> #1373</a></li><li><a href=https://github.com/google/docsy/pull/1523>[BSv5] Footer: drop flex-shrink tweak + other adjustments ·</a>
-<a href=https://github.com/google/docsy/pull/1367>Docsy PR</a><a href=https://github.com/google/docsy/pull/1523> #1523</a></li></ul></li><li><a href=https://github.com/twbs/bootstrap/issues/25254>Why are all col classes &lsquo;position: relative&rsquo;? · Bootstrap v4 issue #25254</a></li><li><a href=https://github.com/orgs/twbs/discussions/37951>Why flex-shrink 0 for all columns? · Bootstrap discussion #37951</a></li></ul><h3 id=import-ordering-of-bootstrap-sass-files-functions-first>Import ordering of Bootstrap Sass files: functions first<a class=td-heading-self-link href=#import-ordering-of-bootstrap-sass-files-functions-first aria-label="Heading self-link"></a></h3><p>Projects can <a href=https://getbootstrap.com/docs/5.2/customize/sass/>import</a>
+<a href=https://github.com/google/docsy/pull/1367>Docsy PR</a><a href=https://github.com/google/docsy/pull/1523> #1523</a></li></ul></li><li><a href=https://github.com/twbs/bootstrap/issues/25254>Why are all col classes &lsquo;position: relative&rsquo;? · Bootstrap v4 issue #25254</a></li><li><a href=https://github.com/orgs/twbs/discussions/37951>Why flex-shrink 0 for all columns? · Bootstrap discussion #37951</a></li></ul><h3 id=import-ordering-of-bootstrap-sass-files-functions-first>Import ordering of Bootstrap Sass files: functions first</h3><p>Projects can <a href=https://getbootstrap.com/docs/5.2/customize/sass/>import</a>
 Bootstrap Sass sources all in one go (using
 <a href=https://github.com/twbs/bootstrap/blob/v5.2.3/scss/bootstrap.scss>bootstrap.scss</a>),
 or selectively import any one of the
@@ -104,7 +104,7 @@ imports from
 <a href=https://github.com/google/docsy/pull/1367>Docsy PR</a>
 <a href=https://github.com/google/docsy/pull/1388>#1388</a></li><li><a href=https://getbootstrap.com/docs/5.2/migration/#new-_mapsscss>New _maps.scss</a>
 from the migration page</li><li><a href=https://getbootstrap.com/docs/5.2/customize/sass/>Importing</a> from
-Bootstrap&rsquo;s Sass customization documentation</li></ul><h2 id=systematic-and-stepwise-migration>Systematic and stepwise migration<a class=td-heading-self-link href=#systematic-and-stepwise-migration aria-label="Heading self-link"></a></h2><p>If you&rsquo;ve glanced at the Bootstrap 5
+Bootstrap&rsquo;s Sass customization documentation</li></ul><h2 id=systematic-and-stepwise-migration>Systematic and stepwise migration</h2><p>If you&rsquo;ve glanced at the Bootstrap 5
 <a href=https://getbootstrap.com/docs/5.2/migration/>migration page</a>, you will see
 that there are a <em>lot</em> of changes to address while migrating. To ensure that we
 didn&rsquo;t miss any, we systematically walked through the migration guide, and
@@ -114,7 +114,7 @@ migration page section is represented in the issue&rsquo;s opening comment: we e
 noted that a migration-page section is irrelevant for Docsy, or added the
 section to the tracking issue, and list the PRs containing corresponding
 Docsy-specific changes. If you&rsquo;re curious to see how that worked out, see
-<a href=https://github.com/google/docsy/issues/470>Upgrade to Bootstrap 5.2 · Docsy issue #470</a>.</p><h2 id=first-bootstrap-5-release-of-docsy>First Bootstrap 5 release of Docsy<a class=td-heading-self-link href=#first-bootstrap-5-release-of-docsy aria-label="Heading self-link"></a></h2><p>A first Bootstrap 5 release of Docsy is planned for the start of June, since
+<a href=https://github.com/google/docsy/issues/470>Upgrade to Bootstrap 5.2 · Docsy issue #470</a>.</p><h2 id=first-bootstrap-5-release-of-docsy>First Bootstrap 5 release of Docsy</h2><p>A first Bootstrap 5 release of Docsy is planned for the start of June, since
 most aspects of the migration have been completed. Some updates have been
 postponed, most notably support for right-to-left
 (<a href=https://getbootstrap.com/docs/5.2/migration/#rtl>RTL</a>) text. For the complete
@@ -126,19 +126,19 @@ plan a separate migration effort to bring Docsy up to
 particular to benefit from new
 <a href=https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/#custom-color-modes>color modes</a>.
 You can track our progress through
-<a href=https://github.com/google/docsy/issues/1528>Docsy issue #1528</a>.</p><h2 id=migrating-docsy-based-projects>Migrating Docsy-based projects<a class=td-heading-self-link href=#migrating-docsy-based-projects aria-label="Heading self-link"></a></h2><p>This section contains some preliminary and general guidance for downstream
-projects. We are planning a separate post to cover more migration details.</p><h3 id=bootstrap-migration-page-walkthrough>Bootstrap migration-page walkthrough<a class=td-heading-self-link href=#bootstrap-migration-page-walkthrough aria-label="Heading self-link"></a></h3><p>Each project uses its own specific set of Bootstrap features, so walking through
+<a href=https://github.com/google/docsy/issues/1528>Docsy issue #1528</a>.</p><h2 id=migrating-docsy-based-projects>Migrating Docsy-based projects</h2><p>This section contains some preliminary and general guidance for downstream
+projects. We are planning a separate post to cover more migration details.</p><h3 id=bootstrap-migration-page-walkthrough>Bootstrap migration-page walkthrough</h3><p>Each project uses its own specific set of Bootstrap features, so walking through
 the Bootstrap 5.2 <a href=https://getbootstrap.com/docs/5.2/migration/>migration page</a>
 will be advisable for most projects. Of course, one strategy is just to upgrade
 and see what breaks or no longer works, but only doing that without a more
 systematic follow-up would be ill-advised for all but the most trivial
 projects&mdash;consider the challenge in detecting and recovering from a missed
-change to a ​​<code>media-breakpoint-down()</code> argument, as discussed earlier.</p><h3 id=docsy-specific-changes>Docsy-specific changes<a class=td-heading-self-link href=#docsy-specific-changes aria-label="Heading self-link"></a></h3><p>During the migration effort we seized the opportunity to do some long overdue
+change to a ​​<code>media-breakpoint-down()</code> argument, as discussed earlier.</p><h3 id=docsy-specific-changes>Docsy-specific changes</h3><p>During the migration effort we seized the opportunity to do some long overdue
 Docsy house cleaning. For details concerning both breaking and non-breaking
 Docsy-specific changes, consult the
 <a href=https://github.com/google/docsy/blob/main/CHANGELOG.md#070>changelog</a>. In
 particular, one non-breaking but important change to be aware of is:
-<a href=https://github.com/google/docsy/pull/1462>[BSv5] Docsy variables cleanup &mldr; PR #1462</a>.</p><h2 id=give-it-a-try>Give it a try!<a class=td-heading-self-link href=#give-it-a-try aria-label="Heading self-link"></a></h2><p>To get a first and quick impression of the impact of the upgrade on your
+<a href=https://github.com/google/docsy/pull/1462>[BSv5] Docsy variables cleanup &mldr; PR #1462</a>.</p><h2 id=give-it-a-try>Give it a try!</h2><p>To get a first and quick impression of the impact of the upgrade on your
 project, it can be informative to simply upgrade Docsy and see what breaks. This
 is what the Docsy team did with Bootstrap 5. Only one change actually broke the
 build of the Docsy User Guide: the
