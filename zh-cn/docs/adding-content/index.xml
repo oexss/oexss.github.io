@@ -60,10 +60,8 @@ Value 值
 ​	默认情况下，Hugo 中启用tags和categories的分类法（参见：https://gohugo.io/content-management/taxonomies/#default-taxonomies）。在 Docsy 中，默认情况下在 hugo.toml/hugo.yaml/hugo.json 中禁用分类法：
 Configuration file: hugo.toml hugo.yaml hugo.json disableKinds = [&amp;#34;taxonomy&amp;#34;, &amp;#34;taxonomyTerm&amp;#34;] disableKinds: - taxonomy - taxonomyTerm { &amp;#34;disableKinds&amp;#34;: [ &amp;#34;taxonomy&amp;#34;, &amp;#34;taxonomyTerm&amp;#34; ] } ​	如果你想在Docsy中启用分类法，你需要在你的项目的 hugo.toml/hugo.yaml/hugo.json 文件中删除（或注释掉）这一行。然后Hugo将生成 tags 和 categories 的分类法页面。如果你想使用其他分类法，你需要在你的配置文件中定义它们。如果你想同时使用自己的分类法和默认的 tags 和 categories 分类法，你还需要除了你自己的分类法外定义它们。你需要为每个分类法提供复数和单数标签。
 ​	通过以下示例，你可以定义一个名为 projects 的额外分类法，除了默认的 tags 和 categories 分类法之外：
-Configuration file: hugo.</description></item><item><title>图表和公式</title><link>https://t.is-local.org/zh-cn/docs/adding-content/diagrams-and-formulae/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/adding-content/diagrams-and-formulae/</guid><description>​ Docsy内置支持多个图表创建和排版工具，您可以使用这些工具向您的站点添加丰富的内容，包括KaTeX、Mermaid、Diagrams.net、PlantUML和MarkMap。
-使用 KaTeX 支持 LaTeX ​ LaTeX是一种高质量的排版系统，用于制作技术和科学文档。由于其出色的数学排版能力，TeX成为了科学文档的沟通和出版的事实标准，特别是如果这些文档包含大量数学公式。LaTeX由Donald Knuth设计和主要编写，最初的版本于1978年发布。由于其起始时间很早，LaTeX的主要输出目标是pdf，并不特别适合生成Web的HTML输出。幸运的是，有一个快速易用的JavaScript库，即KaTeX，可以用于在Web上呈现TeX数学公式，它已经集成到Docsy主题中。
-​ 通过在Docsy中 enabledKaTeX支持，您可以将复杂的数学公式嵌入到网页中，以行内或独立的方式居中显示。由于KaTeX依赖于服务器端渲染，因此它会生成相同的输出，无论您的浏览器或环境如何。公式可以以行内或显示模式显示：
-内联公式 ​ 以下代码示例生成一个带有三个内联公式的文本行：
-When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c= 0\\) and they are \\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\). When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c= 0\) and they are \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
-显示模式的公式 ​ 以下代码示例生成一个介绍性文本行，后跟一个编号为(1)的单独行上的公式：
-The probability of getting \(k\) heads when flipping \(n\) coins is:</description></item></channel></rss>
+Configuration file: hugo.</description></item><item><title>图表和公式</title><link>https://t.is-local.org/zh-cn/docs/adding-content/diagrams-and-formulae/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/adding-content/diagrams-and-formulae/</guid><description>Docsy内置了对许多图表创建和排版工具的支持，您可以使用这些工具向网站添加丰富的内容，包括（KaTeX），Mermaid，Diagrams.net，PlantUML和MarkMap。
+\(\LaTeX\) 支持 \(\KaTeX\) \(\LaTeX\) 是用于制作技术和科学文献的高质量排版系统。由于其出色的数学排版能力, \(\TeX\) 成为科学文件交流和出版的事实标准，特别是如果这些文件包含大量数学公式。最初版本由唐纳德·克努斯（Donald Knuth）设计和编写，于1978年发布。追溯到那么远， \(\LaTeX\) 将“pdf”作为其主要输出目标，并且不是特别适合为 Web 生成 HTML 输出。幸运的是，有了 \(\KaTeX\) 网络上有一个快速且易于使用的 JavaScript 库，用于 \(\TeX\) 数学渲染，该库已集成到 Docsy 主题中。
+借助 Docsy 中的 \(\KaTeX\) 支持 [enabled]（#activating-and-configuring-katex-support），您可以将复杂的数学公式包含在您的网页中，无论是内联的还是以自己的行为中心的。由于 \(\KaTeX\) 依赖于服务器端渲染，因此无论您的浏览器或环境如何，它都会生成相同的输出。公式可以内联显示，也可以显示模式：
+内联公式 下面的代码示例生成一个包含三个内联公式的文本行：
+When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c= 0\\) and they are \\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\). When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c= 0\) and they are \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).</description></item></channel></rss>
