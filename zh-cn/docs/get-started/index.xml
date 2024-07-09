@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>入门指南 on Tommas</title><link>https://t.is-local.org/zh-cn/docs/get-started/</link><description>Recent content in 入门指南 on Tommas</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate/><atom:link href="https://t.is-local.org/zh-cn/docs/get-started/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>入门指南 on Tommas</title><link>https://t.is-local.org/zh-cn/docs/get-started/</link><description>Recent content in 入门指南 on Tommas</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 06 Jul 2024 19:06:40 +0800</lastBuildDate><atom:link href="https://t.is-local.org/zh-cn/docs/get-started/index.xml" rel="self" type="application/rss+xml"/><item><title>其他设置选项</title><link>https://t.is-local.org/zh-cn/docs/get-started/other-options/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/other-options/</guid><description>​ 如果您不想将 Docsy 用作 Hugo 模块（例如，如果您不想安装 Go），但仍不想将主题文件复制到自己的存储库中，则可以将 Docsy 用作 Git 子模块。使用子模块还允许 Hugo 使用 Docsy 存储库中的主题文件，但比 Hugo 模块方法更复杂。这是在旧版本的 Docsy 示例站点中使用的方法，目前仍然得到支持。如果您正在使用 Docy 作为子模块，但想迁移到 Hugo 模块，请参阅我们的迁移指南。
+​ 另外，如果您不想让 Hugo 从外部存储库获取主题文件（例如，如果您想直接自定义和维护本主题的副本，或者您的部署选择要求您在存储库中包含本主题的副本），则可以将文件直接克隆到您的站点源。
+​ 最后，您可以Docsy as an NPM package**.
+​ 本指南提供了所有这些选项的说明，以及常见的先决条件。
+先决条件 安装 Hugo ​ 要本地构建和预览使用 Docsy 的网站（如本示例网站），您需要一个最新的 extended 版本的Hugo（我们推荐使用 0.73.0 版本或更高版本）。如果您从发布页面安装，请确保获取支持 SCSS 的extended Hugo 版本；您可能需要滚动列表以查看它。
+​ 有关全面的 Hugo 文档，请参见 gohugo.io。
+在 Linux 上 ​ 请注意，使用 sudo apt-get install hugo 可能不会为所有 Debian/Ubuntu 版本提供 extended 版本，而且可能不会与最新的 Hugo 版本保持同步。</description></item><item><title>Docker中部署Docsy</title><link>https://t.is-local.org/zh-cn/docs/get-started/quickstart-docker/</link><pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/quickstart-docker/</guid><description>​ 我们提供了一个 Docker 镜像，您可以使用它在本地运行和测试 Docsy 站点，而无需安装所有 Docsy 的依赖项。
+安装先决条件 在 Mac 和 Windows 上，下载并安装 Docker Desktop。在 Linux 上，安装 Docker engine 和 Docker Compose。
+安装可能需要您重新启动计算机以使更改生效。
+安装 git。
+从 docsy-example 模板创建您的存储库 ​ docsy-example 存储库提供了一个基本的站点结构，您可以将其用作创建自己的文档的起点。
+使用 docsy-example 模板 来 创建自己的存储库。
+通过 克隆新创建的存储库 将代码下载到本地计算机。
+将工作目录更改为新创建的文件夹：
+cd docsy-example 构建并运行容器 ​ docsy-example 存储库包括一个 Dockerfile，您可以使用它来运行您的站点。
+构建 Docker 镜像：
+docker-compose build 运行该构建的镜像：
+docker-compose up 在您的 Web 浏览器中打开地址 http://localhost:1313 以加载 docsy-example 主页。现在您可以对源文件进行更改，在您的浏览器中进行实时重新加载。
+Cleanup 清理 ​ 要清理您的系统并删除容器镜像，请按以下步骤操作。
+使用 Ctrl + C 停止 Docker Compose。</description></item><item><title>基本站点配置</title><link>https://t.is-local.org/zh-cn/docs/get-started/basic-configuration/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/basic-configuration/</guid><description>​ 站点范围的配置细节和参数在项目的配置文件 (config.toml 或 hugo.toml) 中定义。这些包括你选择的 Hugo 主题（当然是 Docsy！）、项目名称、社区链接、Google Analytics 配置和 Markdown 解析器参数。在config.toml 的示例项目中查看带注释的示例，了解如何添加此信息。即使你只是使用主题而不是复制整个 Docsy 示例站点，我们建议复制此 config.toml 并进行编辑，因为它包括了许多参数的默认值，你需要设置这些参数才能正确构建站点。
+​ 你可能想要立即删除或自定义复制的 config.toml 文件中的某些默认值：
+国际化 ​ 复制的 config.toml 文件定义了英语、挪威语和波斯语内容。你可以在 多语言支持 中了解 Docsy 如何支持多语言内容。
+​ 如果你不打算翻译你的站点，可以通过从 config.toml 中删除以下行来删除语言切换器：
+[languages.no] languageName =&amp;#34;Norsk&amp;#34; contentDir = &amp;#34;content/no&amp;#34; [languages.no.params] title = &amp;#34;Goldydocs&amp;#34; description = &amp;#34;Docsy er operativsystem for skyen&amp;#34; time_format_default = &amp;#34;02.01.2006&amp;#34; time_format_blog = &amp;#34;02.01.2006&amp;#34; [languages.fa] languageName =&amp;#34;فارسی&amp;#34; contentDir = &amp;#34;content/fa&amp;#34; [languages.fa.params] title = &amp;#34;اسناد گلدی&amp;#34; description = &amp;#34;یک نمونه برای پوسته داکسی&amp;#34; time_format_default = &amp;#34;2006.</description></item><item><title>已知问题</title><link>https://t.is-local.org/zh-cn/docs/get-started/known_issues/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/known_issues/</guid><description>​ 以下问题适用于 MacOS和 Windows Subsystem for Linux:
+MacOS Errors: too many open files or fatal error: pipe failed ​ 默认情况下，MacOS允许打开少量文件描述符。对于较大的网站或同时运行多个应用程序时，当您运行hugo server本地预览网站时，您可能会收到以下错误之一：
+POSTCSS v7 及更早版本：
+ERROR 2020/04/14 12:37:16 Error: listen tcp 127.0.0.1:1313: socket: too many open files POSTCSS v8 及更高版本：
+fatal error: pipe failed Workaround 解决方法 ​ 为了暂时允许更多的打开文件：
+通过运行以下命令查看当前设置：
+sudo launchctl limit maxfiles 通过运行以下命令将限制增加到65535个文件。如果您的站点文件较少，则可以选择设置较低的软（65535）和硬（200000）限制。
+sudo launchctl limit maxfiles 65535 200000 ulimit -n 65535 sudo sysctl -w kern.maxfiles=200000 sudo sysctl -w kern.maxfilesperproc=65535 ​ 请注意，您可能需要为每个新的shell设置这些限制。了解有关这些限制及如何使其永久的更多信息。</description></item></channel></rss>
