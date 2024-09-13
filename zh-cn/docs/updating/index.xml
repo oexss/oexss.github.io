@@ -1,16 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>更新Docsy on Tommas</title><link>https://t.is-local.org/zh-cn/docs/updating/</link><description>Recent content in 更新Docsy on Tommas</description><generator>Hugo</generator><language>zh-cn</language><atom:link href="https://t.is-local.org/zh-cn/docs/updating/index.xml" rel="self" type="application/rss+xml"/><item><title>不使用Hugo模块更新Docsy</title><link>https://t.is-local.org/zh-cn/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/updating-hugo-module/</guid><description>​ 如果你不使用 Hugo 模块，根据你在现有站点上安装 Docsy 的方式，使用以下两个程序之一来更新你的主题。
-cd /path/to/my-existing-site Then invoke hugo&amp;rsquo;s module get subcommand with the update flag:
-hugo mod get -u github.com/google/docsy Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is done!
-Tip 如果你打算更新你的站点，请考虑将你的站点转换为 Hugo 模块。转换后，更新 Docsy 就更简单了！
-hugo mod get -u github.com/google/docsy@vmain Instead of a version tag, you can also specify a commit hash, for example:
-hugo mod get -u github.com/google/docsy@6c8a3afe</description></item><item><title>使用子模块模块更新Docsy</title><link>https://t.is-local.org/zh-cn/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/updating-submodules/</guid><description>如果您没有使用 Hugo 模块，根据您选择在现有站点上安装 Docsy 的方式，请使用以下两个过程之一来更新您的主题。
-Tip 如果您打算更新您的网站，请考虑 [将您的网站转换为 Hugo 模块]（/docs/updating/convert-site-to-module/）。转换后，更新 Docsy 就更简单了！ 更新你的 Docsy 子模块 如果您在项目中使用 [Docsy 主题作为子模块]（/docs/get-started/other-options/#option-1-docsy-as-a-git-submodule），则更新子模块的方法如下：
-切换到本地项目的根目录，然后运行：
-git submodule update --remote 添加更改并将其提交到您的项目：
-git add themes/ git commit -m &amp;#34;Updating theme submodule&amp;#34; 将提交推送到您的项目存储库。例如，运行：
-git push origin master 路线 2：更新您的 Docsy 克隆 如果您 [将 Docsy 主题]（/docs/get-started/other-options/#option-2-clone-the-docsy-theme） 克隆到项目中的“Themes”文件夹，然后使用“git pull”命令：
-导航到本地项目中的“主题”目录：
-cd themes 确保将“origin”设置为“https://github.com/google/docsy.git”：
-git remote -v 更新本地克隆：
-git pull origin master 如果对克隆的主题进行了任何本地更改，则必须手动解决任何合并冲突。</description></item><item><title>迁移到Hugo模块</title><link>https://t.is-local.org/zh-cn/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/convert-site-to-module/</guid><description>适用于急于求成的专家 ​ 从命令行运行以下命令：
-CLI: Unix shell Windows command line cd /path/to/my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain sed -i &amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39; config.toml mv config.toml hugo.toml cat &amp;gt;&amp;gt; hugo.toml &amp;lt;&amp;lt;EOL [module] proxy = &amp;#34;direct&amp;#34; [[module.imports]] path = &amp;#34;github.com/google/docsy&amp;#34; EOL hugo server cd my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain findstr /v /c:&amp;#34;theme = [\&amp;#34;docsy\&amp;#34;]&amp;#34; config.toml &amp;gt; hugo.toml (echo [module]^ proxy = &amp;#34;direct&amp;#34;^ [[module.imports]]^ path = &amp;#34;github.com/google/docsy&amp;#34;)&amp;gt;&amp;gt;hugo.toml hugo server 详细的转换说明 将Docsy主题模块作为站点的依赖项导入 ​ 在命令提示符下，切换到现有站点的根目录。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>更新Docsy on Tommas</title><link>https://t.is-local.org/zh-cn/docs/updating/</link><description>Recent content in 更新Docsy on Tommas</description><generator>Hugo</generator><language>zh-cn</language><atom:link href="https://t.is-local.org/zh-cn/docs/updating/index.xml" rel="self" type="application/rss+xml"/><item><title>不使用Hugo模块更新Docsy</title><link>https://t.is-local.org/zh-cn/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/updating-hugo-module/</guid><description>&lt;p>​ 如果你不使用 Hugo 模块，根据你在现有站点上安装 Docsy 的方式，使用以下两个程序之一来更新你的主题。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then invoke hugo&amp;rsquo;s module &lt;code>get&lt;/code> subcommand with the update flag:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo mod get -u github.com/google/docsy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is
+done!&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ &lt;p>如果你打算更新你的站点，请考虑&lt;a href="https://t.is-local.org/zh-cn/docs/updating/convert-site-to-module/">将你的站点转换为 Hugo 模块&lt;/a>。转换后，更新 Docsy 就更简单了！&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo mod get -u github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Instead of a version tag, you can also specify a commit hash, for example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo mod get -u github.com/google/docsy@6c8a3afe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+&lt;/div></description></item><item><title>使用子模块模块更新Docsy</title><link>https://t.is-local.org/zh-cn/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/updating-submodules/</guid><description>&lt;p>如果您没有使用 Hugo 模块，根据您选择在现有站点上安装 Docsy 的方式，请使用以下两个过程之一来更新您的主题。&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ 如果您打算更新您的网站，请考虑 [将您的网站转换为 Hugo 模块]（/docs/updating/convert-site-to-module/）。转换后，更新 Docsy 就更简单了！
+
+&lt;/div>
+
+&lt;h2 id="更新你的-docsy-子模块">更新你的 Docsy 子模块&lt;a class="td-heading-self-link" href="#%e6%9b%b4%e6%96%b0%e4%bd%a0%e7%9a%84-docsy-%e5%ad%90%e6%a8%a1%e5%9d%97" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>如果您在项目中使用 [Docsy 主题作为子模块]（/docs/get-started/other-options/#option-1-docsy-as-a-git-submodule），则更新子模块的方法如下：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>切换到本地项目的根目录，然后运行：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule update --remote
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>添加更改并将其提交到您的项目：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git add themes/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git commit -m &lt;span style="color:#4e9a06">&amp;#34;Updating theme submodule&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>将提交推送到您的项目存储库。例如，运行：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="路线-2更新您的-docsy-克隆">路线 2：更新您的 Docsy 克隆&lt;a class="td-heading-self-link" href="#%e8%b7%af%e7%ba%bf-2%e6%9b%b4%e6%96%b0%e6%82%a8%e7%9a%84-docsy-%e5%85%8b%e9%9a%86" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>如果您 [将 Docsy 主题]（/docs/get-started/other-options/#option-2-clone-the-docsy-theme） 克隆到项目中的“Themes”文件夹，然后使用“git pull”命令：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>导航到本地项目中的“主题”目录：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> themes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>确保将“origin”设置为“https://github.com/google/docsy.git”：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>更新本地克隆：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git pull origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;p>如果对克隆的主题进行了任何本地更改，则必须手动解决任何合并冲突。&lt;/p></description></item><item><title>迁移到Hugo模块</title><link>https://t.is-local.org/zh-cn/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/updating/convert-site-to-module/</guid><description>&lt;h2 id="适用于急于求成的专家">适用于急于求成的专家&lt;a class="td-heading-self-link" href="#%e9%80%82%e7%94%a8%e4%ba%8e%e6%80%a5%e4%ba%8e%e6%b1%82%e6%88%90%e7%9a%84%e4%b8%93%e5%ae%b6" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​ 从命令行运行以下命令：&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ CLI:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="bash" aria-controls="tabs-00-01" aria-selected="true">
+ Unix shell
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="batchfile" aria-controls="tabs-00-02" aria-selected="false">
+ Windows command line
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4e9a06">&amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39;&lt;/span> config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv config.toml hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &amp;gt;&amp;gt; hugo.toml &lt;span style="color:#4e9a06">&amp;lt;&amp;lt;EOL
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[module]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">proxy = &amp;#34;direct&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[[module.imports]]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">path = &amp;#34;github.com/google/docsy&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">EOL&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Batchfile" data-lang="Batchfile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">cd&lt;/span> my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findstr /v /c:&lt;span style="color:#4e9a06">&amp;#34;theme = [\&amp;#34;&lt;/span>docsy\&lt;span style="color:#4e9a06">&amp;#34;]&amp;#34;&lt;/span> config.toml &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span> hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">echo&lt;/span> [module]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>proxy = &lt;span style="color:#4e9a06">&amp;#34;direct&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>[[module.imports]]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>path = &lt;span style="color:#4e9a06">&amp;#34;github.com/google/docsy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&amp;gt;&amp;gt;&lt;/span>hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;h2 id="详细的转换说明">详细的转换说明&lt;a class="td-heading-self-link" href="#%e8%af%a6%e7%bb%86%e7%9a%84%e8%bd%ac%e6%8d%a2%e8%af%b4%e6%98%8e" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="将docsy主题模块作为站点的依赖项导入">将Docsy主题模块作为站点的依赖项导入&lt;a class="td-heading-self-link" href="#%e5%b0%86docsy%e4%b8%bb%e9%a2%98%e6%a8%a1%e5%9d%97%e4%bd%9c%e4%b8%ba%e7%ab%99%e7%82%b9%e7%9a%84%e4%be%9d%e8%b5%96%e9%a1%b9%e5%af%bc%e5%85%a5" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>​ 在命令提示符下，切换到现有站点的根目录。&lt;/p></description></item></channel></rss>

@@ -1,8 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Tommas</title><link>https://t.is-local.org/en/blog/</link><description>Recent content in Blog on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Docsy 0.10.0 release report</title><link>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</guid><description>The big news with Docsy 0.10.0 is color themes and dark mode!
-Hugo: breaking changes and deprecation notices In this release, Docsy&amp;rsquo;s Hugo dependency is upgraded to 0.125.4 from 0.122.0. An important thing to note here is that Hugo 0.123.0 was a significant upgrade that included some breaking changes. Before upgrading to this Docsy version, review Hugo&amp;rsquo;s deprecation notices and breaking changes since 0.122.0.
-Hugo version support reminder Each Docsy version officially only supports the Hugo version specified in the project&amp;rsquo;s package.</description></item><item><title>Docsy 0.9.0 release report</title><link>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</guid><description>Docsy 0.9.0 is a sizable1 release (containing 65+ PRs) that has some breaking and notable changes worth calling out, namely those related to:
-Footer improvements Repository links and other page info Look and feel Thank you to all contributors!
-Footer improvements For a list of all footer improvements and fixes included in this release, see #1818. We mention a few in this section. More footer improvements, for even easier customization, are planned for the next major release (#1852).</description></item><item><title>Docsy priorities for 2024</title><link>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</guid><description>TL;DR 1.4K projects use Docsy! The top user-project focused priorities for 2024 are: improving Docsy&amp;rsquo;s stability, usability &amp;amp; customizability, and cohesiveness while performing feature consolidation.
-Docsy is a popular theme The Hugo-Docsy tool combo is powerful and effective, as I&amp;rsquo;ve blogged about elsewhere. It&amp;rsquo;s maybe no surprise then, to see Docsy used by 1.4K projects1. Why is Docsy popular? I can&amp;rsquo;t say for sure, but I use and recommend Docsy because it has the core features &amp;mdash; necessary for publishing non-trivial tech-doc sites &amp;mdash; that projects seem to want and need, including support for versioning, multiple languages, auto-generated site navigation, and more.</description></item><item><title>Upgrading to Docsy 0.7 &amp; Bootstrap 5</title><link>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</guid><description>Last June, Docsy celebrated a significant milestone with the release of version 0.7.0. This major upgrade was the result of six months of meticulous work (#470) focused on the migration to Bootstrap 5.2. For highlights and the rationale behind that journey, see Migrating to Bootstrap 5.2.
-This blog post is intended to help those who are upgrading to Docsy 0.7 and Bootstrap 5, based on my Docsy 0.7 upgrade experiences, specifically related to Bootstrap.</description></item><item><title>Migrating to Bootstrap 5.2</title><link>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</guid><description>Docsy, and Docsy-based project websites (including those at the CNCF), have been happily using the Bootstrap CSS framework from Docsy&amp;rsquo;s inception. In January of this year, Bootstrap 4 (the version used by Docsy for the past few years) reached its end of life. While we, the Docsy steering committee, have been eager to benefit from the Bootstrap 5 improvements, we were concerned about the magnitude of the migration effort, as well as the impact on downstream projects.</description></item><item><title>Hello Docsy!</title><link>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</guid><description>Hello It may seem strange to see a &amp;ldquo;Hello&amp;rdquo; post from a project that&amp;rsquo;s several years old, but as Docsy matures as a community-driven project, we thought it was time to (re)introduce ourselves and talk about what&amp;rsquo;s new with your favorite (we hope) Hugo documentation theme!
-Discuss amongst yourselves Our Discussions are really hopping lately! Don&amp;rsquo;t miss our notice of the upcoming deprecation of the Font-Awesome and Bootstrap git submodules or our announcement of our new governance model!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Tommas</title><link>https://t.is-local.org/en/blog/</link><description>Recent content in Blog on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Docsy 0.10.0 release report</title><link>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</guid><description>&lt;p>The big news with Docsy &lt;a href="https://github.com/google/docsy/releases/tag/v0.10.0">0.10.0&lt;/a> is color themes and dark mode!&lt;/p>
+&lt;h2 id="hugo-breaking-changes-and-deprecation-notices">Hugo: breaking changes and deprecation notices&lt;a class="td-heading-self-link" href="#hugo-breaking-changes-and-deprecation-notices" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>In this release, Docsy&amp;rsquo;s Hugo dependency is upgraded to &lt;strong>0.125.4&lt;/strong> from
+0.122.0. An important thing to note here is that Hugo &lt;a href="https://github.com/gohugoio/hugo/releases/tag/v0.123.0">0.123.0&lt;/a> was a
+significant upgrade that included some &lt;strong>breaking changes&lt;/strong>. Before upgrading to
+this Docsy version, review Hugo&amp;rsquo;s deprecation notices and breaking changes since
+0.122.0.&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Hugo version support reminder&lt;/h4>
+
+ Each Docsy version officially &lt;strong>only&lt;/strong> supports the Hugo version specified in
+the project&amp;rsquo;s &lt;a href="https://github.com/google/docsy/blob/main/package.json">package.json&lt;/a> entry for &lt;a href="https://github.com/jakejarvis/hugo-extended">hugo-extended&lt;/a>. Any other compatibility
+is on a best effort basis.
+
+&lt;/div>
+
+&lt;p>A number of updates to this release were to address Hugo&amp;rsquo;s deprecation notices.
+For the complete list, search for &lt;a href="https://github.com/google/docsy/releases/tag/v0.10.0">0.10.0&lt;/a> release changes with &amp;ldquo;deprecat&amp;rdquo; in
+the title.&lt;/p></description></item><item><title>Docsy 0.9.0 release report</title><link>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</guid><description>&lt;p>Docsy &lt;a href="https://github.com/google/docsy/releases/tag/v0.9.0">0.9.0&lt;/a> is a sizable&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> release (&lt;a href="https://github.com/google/docsy/compare/v0.8.0...v0.9.0">containing 65+ PRs&lt;/a>)
+that has some breaking and notable changes worth calling out, namely those
+related to:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#footer">Footer improvements&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#page-meta">Repository links and other page info&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#look-and-feel">Look and feel&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Thank you to all &lt;a href="https://github.com/google/docsy/releases/tag/v0.9.0">contributors&lt;/a>!&lt;/p>
+&lt;h2 id="footer">Footer improvements&lt;a class="td-heading-self-link" href="#footer" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>For a list of all footer improvements and fixes included in this release, see
+&lt;a href="https://github.com/google/docsy/pull/1818">#1818&lt;/a>. We mention a few in this section. More footer improvements, for even
+easier customization, are planned for the next &lt;a href="https://github.com/google/docsy/issues/1812">major release&lt;/a> (&lt;a href="https://github.com/google/docsy/issues/1852">#1852&lt;/a>).&lt;/p></description></item><item><title>Docsy priorities for 2024</title><link>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>TL;DR&lt;/strong> 1.4K projects use Docsy! The top user-project focused priorities for
+2024 are: improving Docsy&amp;rsquo;s stability, usability &amp;amp; customizability, and
+cohesiveness while performing feature consolidation.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="docsy-is-a-popular-theme">Docsy is a popular theme&lt;a class="td-heading-self-link" href="#docsy-is-a-popular-theme" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>The Hugo-Docsy tool combo is powerful and effective, as I&amp;rsquo;ve &lt;a href="https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/">blogged about
+elsewhere&lt;/a>. It&amp;rsquo;s maybe no surprise then, to see Docsy &lt;a href="https://github.com/google/docsy/network/dependents">used by 1.4K
+projects&lt;/a>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Why is Docsy popular? I can&amp;rsquo;t say for sure, but
+I use and recommend Docsy because it has the core features &amp;mdash; necessary for
+publishing non-trivial tech-doc sites &amp;mdash; that projects seem to want and need,
+including support for versioning, multiple languages, auto-generated site
+navigation, and more. It&amp;rsquo;s quick to set up, and it allows projects to focus on
+delivering site content rather than writing site template code.&lt;/p></description></item><item><title>Upgrading to Docsy 0.7 &amp; Bootstrap 5</title><link>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</guid><description>&lt;p>Last June, Docsy celebrated a significant milestone with the release of version
+&lt;a href="https://github.com/google/docsy/releases/tag/v0.7.0">0.7.0&lt;/a>. This major upgrade
+was the result of
+&lt;a href="https://github.com/google/docsy/issues/470">six months of meticulous work (#470)&lt;/a>
+focused on the migration to Bootstrap 5.2. For highlights and the rationale
+behind that journey, see
+&lt;a href="https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/">Migrating to Bootstrap 5.2&lt;/a>.&lt;/p>
+&lt;p>This blog post is intended to help those who are upgrading to Docsy 0.7 and
+Bootstrap 5, based on my Docsy 0.7 upgrade experiences, specifically related to
+Bootstrap. The post starts with general guidance for Docsy-based projects
+wishing to upgrade. Every project&amp;rsquo;s migration experience will be unique, but
+hopefully this post, and the two included case studies, will make your upgrade
+process easier and faster.&lt;/p></description></item><item><title>Migrating to Bootstrap 5.2</title><link>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</guid><description>&lt;p>&lt;a href="https://docsy.dev">Docsy&lt;/a>, and Docsy-based project websites (&lt;a href="https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/">including those
+at the CNCF&lt;/a>), have been happily using the
+&lt;a href="https://getbootstrap.com">Bootstrap CSS framework&lt;/a> from Docsy&amp;rsquo;s inception. In
+January of this year, Bootstrap 4 (the version used by Docsy for the past few
+years) reached its &lt;a href="https://endoflife.date/bootstrap">end of life&lt;/a>. While we,
+the Docsy steering committee, have been eager to benefit from the Bootstrap 5
+improvements, we were concerned about the magnitude of the migration effort, as
+well as the impact on downstream projects. Because of this, the migration was
+delayed for as long as possible. In December of 2022, when Bootstrap 4 stopped
+receiving critical upgrades, we declared
+&lt;a href="https://github.com/google/docsy/discussions/1308">Docsy to be in a feature freeze&lt;/a>,
+and focused our maintenance efforts on the Bootstrap 5 migration.&lt;/p></description></item><item><title>Hello Docsy!</title><link>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</guid><description>&lt;h2 id="hello">Hello&lt;a class="td-heading-self-link" href="#hello" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>It may seem strange to see a &amp;ldquo;Hello&amp;rdquo; post from a project that&amp;rsquo;s several years old, but as Docsy matures as a community-driven project, we thought it was time to (re)introduce ourselves and talk about what&amp;rsquo;s new with your favorite (we hope) Hugo documentation theme!&lt;/p>
+&lt;h3 id="discuss-amongst-yourselves">Discuss amongst yourselves&lt;a class="td-heading-self-link" href="#discuss-amongst-yourselves" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Our &lt;a href="https://github.com/google/docsy/discussions">Discussions&lt;/a> are really hopping lately! Don&amp;rsquo;t miss our notice of the &lt;a href="https://github.com/google/docsy/discussions/950">upcoming deprecation of the Font-Awesome and Bootstrap git submodules&lt;/a> or our announcement of our &lt;a href="https://github.com/google/docsy/discussions/798">new governance model&lt;/a>!&lt;/p></description></item></channel></rss>

@@ -1,21 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>将Docsy作为Hugo模块使用 on Tommas</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/</link><description>Recent content in 将Docsy作为Hugo模块使用 on Tommas</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 06 Jul 2024 19:00:33 +0800</lastBuildDate><atom:link href="https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/index.xml" rel="self" type="application/rss+xml"/><item><title>开始之前</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/installation-prerequisites/</link><pubDate>Wed, 08 Dec 2021 11:12:59 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/installation-prerequisites/</guid><description>​ 本页面描述了构建使用 Docsy 作为 Hugo 模块的站点。
-安装 Hugo ​ 为了本地构建和预览使用 Docsy 的站点（比如这个示例站点），需要安 装最新的扩展版 Hugo（我们推荐使用版 本 0.73.0 或更高版本）。如果从发布页面进行安装，请确保获取的是支持 SCSS的扩展 版（extended） Hugo；你可能需要滚动到发布列表的末尾才能找到它。
-​ 有关全面的 Hugo 文档，请参阅 gohugo.io。
-在 Linux 上 ​ 谨慎使用 sudo apt-get install hugo 命令进行安装，因为 它不能为所有 Debian/Ubuntu 版本提供扩展版 Hugo，也可能不是最新的版本。
-​ 如果你已经安装了 Hugo，请检查其版本：
-hugo version ​ 如果结果是 v0.109.0 或更早版本，或者看不到 Extended 字样，那么你需要安装最新 版本。在 Install Hugo 页 面中，可以查看完整的 Linux 安装选项。以下是从发布页面安装 Hugo 的方法：
-前往 Hugo releases 页面。
-在最新版本中，向下滚动直到找到扩展版 Hugo 的列表。
-下载最新的扩展版 Hugo（hugo_extended_0.1XX_Linux-64bit.tar.gz）。
-创建一个新目录：
-mkdir hugo 将下载的文件解压到 hugo 目录中。</description></item><item><title>创建新站点：从预设的站点开始</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/example-site-as-template/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/example-site-as-template/</guid><description>​ 创建新 Docsy 站点的最简单方法是使用 Docsy 示例站点的源代码作为起点。这种方法为您的站点提供了一个骨架结构，包括顶层和文档章节以及您可以根据需要修改的模板。示例站点会自动作为 Hugo 模块引入 Docsy 主题，因此很容易保持最新状态。
-​ 如果您更喜欢从头开始创建站点，请按照&amp;quot;从头开始创建站点（Start a site from scratch）&amp;ldquo;的说明进行操作。
-快速设置 ​ 在 Unix Shell 或 Windows 命令行中运行以下命令：
-git clone https://github.com/google/docsy-example.git my-new-site cd my-new-site hugo server ​ 现在，您可以在浏览器中预览 http://localhost:1313 中的新站点。
-详细设置说明 克隆 Docsy 示例站点 ​ 示例站点为您构建文档站点提供了一个很好的起点，并且预先配置为自动引入 Docsy 主题作为 Hugo 模块。有两种不同的方法可以获取示例站点的本地克隆：
-如果您只想创建本地副本，请选择选项1。 如果您有 GitHub 帐户并希望为站点创建 GitHub 存储库，请选择选项2。 选项1：使用命令行（仅本地副本） ​ 如果您想使用除GitHub之外的远程存储库（例如GitLab、BitBucket、AWS CodeCommit、Gitea），或者根本不需要远程存储库，只需直接使用git clone创建一个本地工作副本，将您选择的本地存储库名称（此处为my-new-site）作为最后一个参数即可：
-git clone https://github.com/google/docsy-example.git my-new-site 选项2：使用 GitHub UI（本地副本+关联的 GitHub 存储库） ​ 由于Docsy示例站点存储库是模板存储库，因此创建自己的远程GitHub克隆Docsy示例站点存储库非常容易：
-进入Docsy示例站点存储库，点击Use this template。</description></item><item><title>创建新站点：从头开始创建新站点</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/start-from-scratch/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/start-from-scratch/</guid><description>​ 创建 Docsy 站点的最简单方法是复制我们的示例站点。但是，如果您是经验丰富的 Hugo 用户或者我们示例站点的站点结构不符合您的需求，您可能更喜欢从头开始创建新的站点。使用此选项，您将获得 Docsy 的外观和感觉、导航和其他功能，但您需要指定自己的站点结构。
-​ 这些说明仅为您的站点项目提供最小的文件结构，以便您可以逐步构建和扩展您的实际站点。第一步是将 Docsy 主题作为 Hugo 模块添加到您的站点中。如果需要，您可以轻松地从 Docsy GitHub 存储库更新模块到最新版本。
-快速设置 ​ 在您的命令提示符下运行以下命令：
-CLI: Unix shell Windows command line hugo new site my-new-site cd my-new-site hugo mod init github.com/me/my-new-site hugo mod get github.com/google/docsy@vmain cat &amp;gt;&amp;gt; hugo.toml &amp;lt;&amp;lt;EOL [module] proxy = &amp;#34;direct&amp;#34; [[module.imports]] path = &amp;#34;github.com/google/docsy&amp;#34; EOL hugo server hugo new site my-new-site cd my-new-site hugo mod init github.com/me/my-new-site hugo mod get github.com/google/docsy@vmain (echo [module]^ proxy = &amp;#34;direct&amp;#34;^ [[module.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>将Docsy作为Hugo模块使用 on Tommas</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/</link><description>Recent content in 将Docsy作为Hugo模块使用 on Tommas</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 06 Jul 2024 19:00:33 +0800</lastBuildDate><atom:link href="https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/index.xml" rel="self" type="application/rss+xml"/><item><title>开始之前</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/installation-prerequisites/</link><pubDate>Wed, 08 Dec 2021 11:12:59 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/installation-prerequisites/</guid><description>&lt;p>​ 本页面描述了构建使用 Docsy 作为 Hugo 模块的站点。&lt;/p>
+&lt;h2 id="安装-hugo">安装 Hugo&lt;a class="td-heading-self-link" href="#%e5%ae%89%e8%a3%85-hugo" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​ 为了本地构建和预览使用 Docsy 的站点（比如这个示例站点），需要安
+装&lt;a href="https://github.com/gohugoio/hugo/releases">最新的扩展版 Hugo&lt;/a>（我们推荐使用版
+本 0.73.0 或更高版本）。如果从发布页面进行安装，请确保获取的是支持
+&lt;a href="https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html">SCSS&lt;/a>的扩展
+版（&lt;code>extended&lt;/code>） Hugo；你可能需要滚动到发布列表的末尾才能找到它。&lt;/p>
+&lt;p>​ 有关全面的 Hugo 文档，请参阅 &lt;a href="https://gohugo.io/">gohugo.io&lt;/a>。&lt;/p>
+&lt;h3 id="在-linux-上">在 Linux 上&lt;a class="td-heading-self-link" href="#%e5%9c%a8-linux-%e4%b8%8a" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>​ 谨慎使用 &lt;code>sudo apt-get install hugo&lt;/code> 命令进行安装，因为
+它&lt;a href="https://gohugo.io/getting-started/installing/#debian-and-ubuntu">不能为所有 Debian/Ubuntu 版本&lt;/a>提供扩展版 Hugo，也可能不是最新的版本。&lt;/p>
+&lt;p>​ 如果你已经安装了 Hugo，请检查其版本：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>​ 如果结果是 &lt;code>v0.109.0&lt;/code> 或更早版本，或者看不到 &lt;code>Extended&lt;/code> 字样，那么你需要安装最新
+版本。在 &lt;a href="https://gohugo.io/getting-started/installing/#linux">Install Hugo&lt;/a> 页
+面中，可以查看完整的 Linux 安装选项。以下是从发布页面安装 Hugo 的方法：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>前往 &lt;a href="https://github.com/gohugoio/hugo/releases">Hugo releases&lt;/a> 页面。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在最新版本中，向下滚动直到找到扩展版 Hugo 的列表。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>下载最新的扩展版 Hugo（&lt;code>hugo_extended_0.1XX_Linux-64bit.tar.gz&lt;/code>）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>创建一个新目录：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>将下载的文件解压到 &lt;code>hugo&lt;/code> 目录中。&lt;/p></description></item><item><title>创建新站点：从预设的站点开始</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/example-site-as-template/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/example-site-as-template/</guid><description>&lt;p>​ 创建新 Docsy 站点的最简单方法是使用 &lt;a href="https://github.com/google/docsy-example">Docsy 示例站点&lt;/a>的源代码作为起点。这种方法为您的站点提供了一个骨架结构，包括顶层和文档章节以及您可以根据需要修改的模板。示例站点会自动作为 &lt;a href="https://gohugo.io/hugo-modules/">Hugo 模块&lt;/a>引入 Docsy 主题，因此很容易&lt;a href="https://t.is-local.org/zh-cn/docs/updating/updating-hugo-module/">保持最新状态&lt;/a>。&lt;/p>
+&lt;p>​ 如果您更喜欢从头开始创建站点，请按照&amp;quot;从头开始创建站点（Start a site from scratch）&amp;ldquo;的说明进行操作。&lt;/p>
+&lt;h2 id="快速设置">快速设置&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e8%ae%be%e7%bd%ae" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​ 在 Unix Shell 或 Windows 命令行中运行以下命令：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/google/docsy-example.git my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>​ 现在，您可以在浏览器中预览 &lt;a href="http://localhost:1313/">http://localhost:1313&lt;/a> 中的新站点。&lt;/p>
+&lt;h2 id="详细设置说明">详细设置说明&lt;a class="td-heading-self-link" href="#%e8%af%a6%e7%bb%86%e8%ae%be%e7%bd%ae%e8%af%b4%e6%98%8e" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="克隆-docsy-示例站点">克隆 Docsy 示例站点&lt;a class="td-heading-self-link" href="#%e5%85%8b%e9%9a%86-docsy-%e7%a4%ba%e4%be%8b%e7%ab%99%e7%82%b9" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>​ &lt;a href="https://example.docsy.dev/">示例站点&lt;/a>为您构建文档站点提供了一个很好的起点，并且预先配置为自动引入 Docsy 主题作为 Hugo 模块。有两种不同的方法可以获取示例站点的本地克隆：&lt;/p>
+&lt;ul>
+&lt;li>如果您只想创建本地副本，请选择选项1。&lt;/li>
+&lt;li>如果您有 GitHub 帐户并希望为站点创建 GitHub 存储库，请选择选项2。&lt;/li>
+&lt;/ul>
+&lt;h4 id="选项1使用命令行仅本地副本">选项1：使用命令行（仅本地副本）&lt;a class="td-heading-self-link" href="#%e9%80%89%e9%a1%b91%e4%bd%bf%e7%94%a8%e5%91%bd%e4%bb%a4%e8%a1%8c%e4%bb%85%e6%9c%ac%e5%9c%b0%e5%89%af%e6%9c%ac" aria-label="Heading self-link">&lt;/a>&lt;/h4>
+&lt;p>​ 如果您想使用除GitHub之外的远程存储库（例如&lt;a href="https://gitlab.com/">GitLab&lt;/a>、&lt;a href="https://bitbucket.org/">BitBucket&lt;/a>、&lt;a href="https://aws.amazon.com/codecommit/">AWS CodeCommit&lt;/a>、&lt;a href="https://gitea.io/">Gitea&lt;/a>），或者根本不需要远程存储库，只需直接使用&lt;code>git clone&lt;/code>创建一个本地工作副本，将您选择的本地存储库名称（此处为&lt;code>my-new-site&lt;/code>）作为最后一个参数即可：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/google/docsy-example.git my-new-site
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="选项2使用-github-ui本地副本关联的-github-存储库">选项2：使用 GitHub UI（本地副本+关联的 GitHub 存储库）&lt;a class="td-heading-self-link" href="#%e9%80%89%e9%a1%b92%e4%bd%bf%e7%94%a8-github-ui%e6%9c%ac%e5%9c%b0%e5%89%af%e6%9c%ac%e5%85%b3%e8%81%94%e7%9a%84-github-%e5%ad%98%e5%82%a8%e5%ba%93" aria-label="Heading self-link">&lt;/a>&lt;/h4>
+&lt;p>​ 由于Docsy示例站点存储库是&lt;a href="https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/">模板存储库&lt;/a>，因此创建自己的远程GitHub克隆Docsy示例站点存储库非常容易：&lt;/p></description></item><item><title>创建新站点：从头开始创建新站点</title><link>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/start-from-scratch/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/start-from-scratch/</guid><description>&lt;p>​ 创建 Docsy 站点的最简单方法是&lt;a href="https://t.is-local.org/zh-cn/docs/get-started/docsy-as-module/example-site-as-template/">复制我们的示例站点&lt;/a>。但是，如果您是经验丰富的 Hugo 用户或者我们示例站点的站点结构不符合您的需求，您可能更喜欢从头开始创建新的站点。使用此选项，您将获得 Docsy 的外观和感觉、导航和其他功能，但您需要指定自己的站点结构。&lt;/p>
+&lt;p>​ 这些说明仅为您的站点项目提供最小的文件结构，以便您可以逐步构建和扩展您的实际站点。第一步是将 Docsy 主题作为 &lt;a href="https://gohugo.io/hugo-modules/">Hugo 模块&lt;/a>添加到您的站点中。如果需要，您可以轻松地从 Docsy GitHub 存储库&lt;a href="https://t.is-local.org/docs/updatedocsy/">更新&lt;/a>模块到最新版本。&lt;/p>
+&lt;h2 id="快速设置">快速设置&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e8%ae%be%e7%bd%ae" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​ 在您的命令提示符下运行以下命令：&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ CLI:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="bash" aria-controls="tabs-00-01" aria-selected="true">
+ Unix shell
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="batchfile" aria-controls="tabs-00-02" aria-selected="false">
+ Windows command line
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>hugo new site my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me/my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &amp;gt;&amp;gt; hugo.toml &lt;span style="color:#4e9a06">&amp;lt;&amp;lt;EOL
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[module]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">proxy = &amp;#34;direct&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[[module.imports]]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">path = &amp;#34;github.com/google/docsy&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">EOL&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Batchfile" data-lang="Batchfile">&lt;span style="display:flex;">&lt;span>hugo new site my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">cd&lt;/span> my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me/my-new-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">echo&lt;/span> [module]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>proxy = &lt;span style="color:#4e9a06">&amp;#34;direct&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>[[module.imports]]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>path = &lt;span style="color:#4e9a06">&amp;#34;github.com/google/docsy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>​ 现在，您可以在浏览器中预览您的新站点，网址为 &lt;a href="http://localhost:1313">http://localhost:1313&lt;/a>。&lt;/p></description></item></channel></rss>

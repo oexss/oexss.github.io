@@ -1,7 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update Docsy on Tommas</title><link>https://t.is-local.org/en/docs/updating/</link><description>Recent content in Update Docsy on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/docs/updating/index.xml" rel="self" type="application/rss+xml"/><item><title>Update your Docsy Hugo Module</title><link>https://t.is-local.org/en/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-hugo-module/</guid><description>When using the Docsy theme as a Hugo Module, updating your theme is really easy.
-At the command prompt, change to the root directory of your existing site.
-cd /path/to/my-existing-site Then invoke hugo&amp;rsquo;s module get subcommand with the update flag:
-hugo mod get -u github.com/google/docsy Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is done!
-Tip If you want to set your module to a certain version inside the Docsy theme repo, simply specify the name of the tag representing this version when updating your theme, for example:</description></item><item><title>Update Docsy without Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-submodules/</guid><description>If you aren&amp;rsquo;t using Hugo Modules, depending on how you chose to install Docsy on your existing site, use one of the following two procedures to update your theme.
-Tip If you intend to update your site, consider converting your site to Hugo Modules. After conversion, it&amp;rsquo;s even simpler to update Docsy! Update your Docsy submodule If you are using the Docsy theme as a submodule in your project, here&amp;rsquo;s how you update the submodule:</description></item><item><title>Migrate to Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/convert-site-to-module/</guid><description>TL;DR: Conversion for the impatient expert Run the following from the command line:
-CLI: Unix shell Windows command line cd /path/to/my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain sed -i &amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39; config.toml mv config.toml hugo.toml cat &amp;gt;&amp;gt; hugo.toml &amp;lt;&amp;lt;EOL [module] proxy = &amp;#34;direct&amp;#34; [[module.imports]] path = &amp;#34;github.com/google/docsy&amp;#34; EOL hugo server cd my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain findstr /v /c:&amp;#34;theme = [\&amp;#34;docsy\&amp;#34;]&amp;#34; config.toml &amp;gt; hugo.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update Docsy on Tommas</title><link>https://t.is-local.org/en/docs/updating/</link><description>Recent content in Update Docsy on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/docs/updating/index.xml" rel="self" type="application/rss+xml"/><item><title>Update your Docsy Hugo Module</title><link>https://t.is-local.org/en/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-hugo-module/</guid><description>&lt;p>When using the Docsy theme as a Hugo Module, updating your theme is really easy.&lt;/p>
+&lt;p>At the command prompt, change to the root directory of your existing site.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then invoke hugo&amp;rsquo;s module &lt;code>get&lt;/code> subcommand with the update flag:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo mod get -u github.com/google/docsy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is
+done!&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ &lt;p>If you want to set your module to a certain version inside the Docsy theme repo,
+simply specify the name of the tag representing this version when updating your
+theme, for example:&lt;/p></description></item><item><title>Update Docsy without Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-submodules/</guid><description>&lt;p>If you aren&amp;rsquo;t using Hugo Modules, depending on how you chose to install Docsy on your existing site, use one of the following two procedures to update your theme.&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ If you intend to update your site, consider &lt;a href="https://t.is-local.org/en/docs/updating/convert-site-to-module/">converting your site to Hugo Modules&lt;/a>. After conversion, it&amp;rsquo;s even simpler to update Docsy!
+
+&lt;/div>
+
+&lt;h2 id="update-your-docsy-submodule">Update your Docsy submodule&lt;a class="td-heading-self-link" href="#update-your-docsy-submodule" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>If you are using the &lt;a href="https://t.is-local.org/en/docs/get-started/other-options/#option-1-docsy-as-a-git-submodule">Docsy theme as a submodule&lt;/a> in your project, here&amp;rsquo;s how you update the submodule:&lt;/p></description></item><item><title>Migrate to Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/convert-site-to-module/</guid><description>&lt;h2 id="tldr-conversion-for-the-impatient-expert">TL;DR: Conversion for the impatient expert&lt;a class="td-heading-self-link" href="#tldr-conversion-for-the-impatient-expert" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Run the following from the command line:&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ CLI:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="bash" aria-controls="tabs-00-01" aria-selected="true">
+ Unix shell
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="batchfile" aria-controls="tabs-00-02" aria-selected="false">
+ Windows command line
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4e9a06">&amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39;&lt;/span> config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv config.toml hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &amp;gt;&amp;gt; hugo.toml &lt;span style="color:#4e9a06">&amp;lt;&amp;lt;EOL
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[module]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">proxy = &amp;#34;direct&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[[module.imports]]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">path = &amp;#34;github.com/google/docsy&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">EOL&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Batchfile" data-lang="Batchfile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">cd&lt;/span> my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findstr /v /c:&lt;span style="color:#4e9a06">&amp;#34;theme = [\&amp;#34;&lt;/span>docsy\&lt;span style="color:#4e9a06">&amp;#34;]&amp;#34;&lt;/span> config.toml &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span> hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">echo&lt;/span> [module]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>proxy = &lt;span style="color:#4e9a06">&amp;#34;direct&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>[[module.imports]]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>path = &lt;span style="color:#4e9a06">&amp;#34;github.com/google/docsy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&amp;gt;&amp;gt;&lt;/span>hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;h2 id="detailed-conversion-instructions">Detailed conversion instructions&lt;a class="td-heading-self-link" href="#detailed-conversion-instructions" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="import-the-docsy-theme-module-as-a-dependency-of-your-site">Import the Docsy theme module as a dependency of your site&lt;a class="td-heading-self-link" href="#import-the-docsy-theme-module-as-a-dependency-of-your-site" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>At the command prompt, change to the root directory of your existing site.&lt;/p></description></item></channel></rss>

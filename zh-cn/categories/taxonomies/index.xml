@@ -1,14 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Taxonomies on Tommas</title><link>https://t.is-local.org/zh-cn/categories/taxonomies/</link><description>Recent content in Taxonomies on Tommas</description><generator>Hugo</generator><language>zh-cn</language><atom:link href="https://t.is-local.org/zh-cn/categories/taxonomies/index.xml" rel="self" type="application/rss+xml"/><item><title>分类支持</title><link>https://t.is-local.org/zh-cn/docs/adding-content/taxonomy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/adding-content/taxonomy/</guid><description>​	Docsy支持Hugo的分类法（参见：https://gohugo.io/content-management/taxonomies/）用于文档和博客章节。您可以在此页面上查看默认布局，并测试生成的链接行为。
-Terminology 术语 ​	要理解分类法的用法，您应理解以下术语：
-Taxonomy 分类法
-可用于对内容进行分类的类别，例如：标签、分类、项目、人员。
-Term 条目
-分类法内的关键词，例如：在项目中：项目A、项目B。
-Value 值
-分配给条目的内容，例如：您站点上的页面，它属于特定的项目
-​	在官方Hugo文档中可以找到一个电影站点的分类法示例：https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website。
-参数 ​	有各种参数来控制项目配置文件中分类法的功能。
-​	默认情况下，Hugo 中启用tags和categories的分类法（参见：https://gohugo.io/content-management/taxonomies/#default-taxonomies）。在 Docsy 中，默认情况下在 hugo.toml/hugo.yaml/hugo.json 中禁用分类法：
-Configuration file: hugo.toml hugo.yaml hugo.json disableKinds = [&amp;#34;taxonomy&amp;#34;, &amp;#34;taxonomyTerm&amp;#34;] disableKinds: - taxonomy - taxonomyTerm { &amp;#34;disableKinds&amp;#34;: [ &amp;#34;taxonomy&amp;#34;, &amp;#34;taxonomyTerm&amp;#34; ] } ​	如果你想在Docsy中启用分类法，你需要在你的项目的 hugo.toml/hugo.yaml/hugo.json 文件中删除（或注释掉）这一行。然后Hugo将生成 tags 和 categories 的分类法页面。如果你想使用其他分类法，你需要在你的配置文件中定义它们。如果你想同时使用自己的分类法和默认的 tags 和 categories 分类法，你还需要除了你自己的分类法外定义它们。你需要为每个分类法提供复数和单数标签。
-​	通过以下示例，你可以定义一个名为 projects 的额外分类法，除了默认的 tags 和 categories 分类法之外：
-Configuration file: hugo.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Taxonomies on Tommas</title><link>https://t.is-local.org/zh-cn/categories/taxonomies/</link><description>Recent content in Taxonomies on Tommas</description><generator>Hugo</generator><language>zh-cn</language><atom:link href="https://t.is-local.org/zh-cn/categories/taxonomies/index.xml" rel="self" type="application/rss+xml"/><item><title>分类支持</title><link>https://t.is-local.org/zh-cn/docs/adding-content/taxonomy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/zh-cn/docs/adding-content/taxonomy/</guid><description>&lt;p>​	Docsy支持Hugo的分类法（参见：&lt;a href="https://gohugo.io/content-management/taxonomies/">https://gohugo.io/content-management/taxonomies/&lt;/a>）用于文档和博客章节。您可以在此页面上查看默认布局，并测试生成的链接行为。&lt;/p>
+&lt;h2 id="terminology-术语">Terminology 术语&lt;a class="td-heading-self-link" href="#terminology-%e6%9c%af%e8%af%ad" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​	要理解分类法的用法，您应理解以下术语：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Taxonomy 分类法&lt;/p>
+&lt;p>可用于对内容进行分类的类别，例如：标签、分类、项目、人员。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Term 条目&lt;/p>
+&lt;p>分类法内的关键词，例如：在项目中：项目A、项目B。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Value 值&lt;/p>
+&lt;p>分配给条目的内容，例如：您站点上的页面，它属于特定的项目&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>​	在官方Hugo文档中可以找到一个电影站点的分类法示例：&lt;a href="https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website">https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website&lt;/a>。&lt;/p>
+&lt;h2 id="参数">参数&lt;a class="td-heading-self-link" href="#%e5%8f%82%e6%95%b0" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>​	有各种参数来控制项目&lt;a href="https://gohugo.io/getting-started/configuration/#configuration-file">配置文件&lt;/a>中分类法的功能。&lt;/p>
+&lt;p>​	默认情况下，Hugo 中启用&lt;code>tags&lt;/code>和&lt;code>categories&lt;/code>的分类法（参见：&lt;a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies">https://gohugo.io/content-management/taxonomies/#default-taxonomies&lt;/a>）。在 Docsy 中，默认情况下在 &lt;code>hugo.toml&lt;/code>/&lt;code>hugo.yaml&lt;/code>/&lt;code>hugo.json&lt;/code> 中禁用分类法：&lt;/p>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ Configuration file:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="toml" aria-controls="tabs-00-01" aria-selected="true">
+ hugo.toml
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="yaml" aria-controls="tabs-00-02" aria-selected="false">
+ hugo.yaml
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ data-td-tp-persist="json" aria-controls="tabs-00-03" aria-selected="false">
+ hugo.json
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">disableKinds&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;taxonomy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;taxonomyTerm&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">disableKinds&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">taxonomy&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">taxonomyTerm&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;disableKinds&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;taxonomy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;taxonomyTerm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>​	如果你想在Docsy中启用分类法，你需要在你的项目的 &lt;code>hugo.toml&lt;/code>/&lt;code>hugo.yaml&lt;/code>/&lt;code>hugo.json&lt;/code> 文件中删除（或注释掉）这一行。然后Hugo将生成 &lt;code>tags&lt;/code> 和 &lt;code>categories&lt;/code> 的分类法页面。如果你想使用其他分类法，你需要在你的&lt;a href="https://gohugo.io/getting-started/configuration/#configuration-file">配置文件&lt;/a>中定义它们。如果你想同时使用自己的分类法和默认的 &lt;code>tags&lt;/code> 和 &lt;code>categories&lt;/code> 分类法，你还需要除了你自己的分类法外定义它们。你需要为每个分类法提供复数和单数标签。&lt;/p></description></item></channel></rss>

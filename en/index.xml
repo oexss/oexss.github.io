@@ -1,38 +1,363 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tommas</title><link>https://t.is-local.org/en/</link><description>Recent content on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Before you begin</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/installation-prerequisites/</link><pubDate>Wed, 08 Dec 2021 11:12:59 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/installation-prerequisites/</guid><description>This page describes the prerequisites for building a site that uses Docsy as a Hugo Module.
-Install Hugo You need a recent extended version (version 0.110.0 or later) of Hugo to do local builds and previews of sites (like this one) that use Docsy. If you install from the release page, make sure to get the extended Hugo version, which supports SCSS; you may need to scroll down the list of releases to see it.</description></item><item><title>Adding Content</title><link>https://t.is-local.org/en/docs/adding-content/content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/content/</guid><description>So you&amp;rsquo;ve got a new Hugo website with Docsy, now it&amp;rsquo;s time to add some content! This page tells you how to use the theme to add and structure your site content.
-Content root directory You add content for your site under the content root directory of your Hugo site project - either content/ or a language-specific root like content/en/. The main exception here is static files that you don&amp;rsquo;t want built into your site: you can find out more about where you add these below in Adding static content.</description></item><item><title>Update your Docsy Hugo Module</title><link>https://t.is-local.org/en/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-hugo-module/</guid><description>When using the Docsy theme as a Hugo Module, updating your theme is really easy.
-At the command prompt, change to the root directory of your existing site.
-cd /path/to/my-existing-site Then invoke hugo&amp;rsquo;s module get subcommand with the update flag:
-hugo mod get -u github.com/google/docsy Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is done!
-Tip If you want to set your module to a certain version inside the Docsy theme repo, simply specify the name of the tag representing this version when updating your theme, for example:</description></item><item><title>Other setup options</title><link>https://t.is-local.org/en/docs/get-started/other-options/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/other-options/</guid><description>If you don&amp;rsquo;t want to use Docsy as a Hugo Module (for example if you do not want to install Go) but still don&amp;rsquo;t want to copy the theme files into your own repo, you can use Docsy as a Git submodule. Using submodules also lets Hugo use the theme files from Docsy repo, though is more complicated to maintain than the Hugo Modules approach. This is the approach used in older versions of the Docsy example site, and is still supported.</description></item><item><title>Create a new site: start with a prepopulated site</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/example-site-as-template/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/example-site-as-template/</guid><description>The simplest way to create a new Docsy site is to use the source of the Docsy example site as starting point. This approach gives you a skeleton structure for your site, with top-level and documentation sections and templates that you can modify as necessary. The example site automatically pulls in the Docsy theme as a Hugo Module, so it&amp;rsquo;s easy to keep up to date.
-If you prefer to create a site from scratch, follow the instructions in Start a site from scratch.</description></item><item><title>Look and Feel</title><link>https://t.is-local.org/en/docs/adding-content/lookandfeel/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/lookandfeel/</guid><description>By default, a site using Docsy has the theme&amp;rsquo;s default fonts, colors, and general look and feel. However, if you want your own color scheme (and you probably will!) you can very easily override the theme defaults with your own project-specific values - Hugo will look in your project files first when looking for information to build your site. And because Docsy uses Bootstrap 5 and SCSS for styling, you can override just single values (such as project colors and fonts) in its special SCSS project variables file, or do more serious customization by creating your own styles.</description></item><item><title>Update Docsy without Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-submodules/</guid><description>If you aren&amp;rsquo;t using Hugo Modules, depending on how you chose to install Docsy on your existing site, use one of the following two procedures to update your theme.
-Tip If you intend to update your site, consider converting your site to Hugo Modules. After conversion, it&amp;rsquo;s even simpler to update Docsy! Update your Docsy submodule If you are using the Docsy theme as a submodule in your project, here&amp;rsquo;s how you update the submodule:</description></item><item><title>Create a new site: Start a new site from scratch</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/start-from-scratch/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/start-from-scratch/</guid><description>The simplest approach to creating a Docsy site is copying our example site. However, if you&amp;rsquo;re an experienced Hugo user or the site structure of our example site doesn&amp;rsquo;t meet your needs, you may prefer to create a new site from scratch. With this option, you&amp;rsquo;ll get Docsy look and feel, navigation, and other features, but you&amp;rsquo;ll need to specify your own site structure.
-These instructions give you a minimum file structure for your site project only, so that you build and extend your actual site step by step.</description></item><item><title>Deploy Docsy inside a Docker container</title><link>https://t.is-local.org/en/docs/get-started/quickstart-docker/</link><pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/get-started/quickstart-docker/</guid><description>We provide a Docker image that you can use to run and test your Docsy site locally, without having to install all Docsy&amp;rsquo;s dependencies.
-Install the prerequisites On Mac and Windows, download and install Docker Desktop. On Linux, install Docker engine and Docker compose.
-The installation may require you to reboot your computer for the changes to take effect.
-Install git.
-Create your repository from the docsy-example template The docsy-example repository provides a basic site structure that you can use as starting point to create your own documentation.</description></item><item><title>Navigation and Menus</title><link>https://t.is-local.org/en/docs/adding-content/navigation/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/navigation/</guid><description>Docsy provides multiple built-in navigation features for your sites, including site menus, section menus, and page menus. This page shows you how they work and how to configure and customize them to meet your needs.
-Top-level menu The top level menu (the one that appears in the top navigation bar for the entire site) uses your site&amp;rsquo;s main menu. All Hugo sites have a main menu array of menu entries, accessible via the .</description></item><item><title>Search</title><link>https://t.is-local.org/en/docs/adding-content/search/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/search/</guid><description>Docsy offers multiple options that let your readers search your site content, so you can pick one that suits your needs. You can choose from:
-Google Custom Search Engine (GCSE), the default option, which uses Google&amp;rsquo;s index of your public site to generate a search results page. Algolia DocSearch, which uses Algolia&amp;rsquo;s indexing and search mechanism. Search results are displayed as a pop-up. Algolia DocSearch is free for public documentation sites.</description></item><item><title>Migrate to Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/convert-site-to-module/</guid><description>TL;DR: Conversion for the impatient expert Run the following from the command line:
-CLI: Unix shell Windows command line cd /path/to/my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain sed -i &amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39; config.toml mv config.toml hugo.toml cat &amp;gt;&amp;gt; hugo.toml &amp;lt;&amp;lt;EOL [module] proxy = &amp;#34;direct&amp;#34; [[module.imports]] path = &amp;#34;github.com/google/docsy&amp;#34; EOL hugo server cd my-existing-site hugo mod init github.com/me-at-github/my-existing-site hugo mod get github.com/google/docsy@vmain findstr /v /c:&amp;#34;theme = [\&amp;#34;docsy\&amp;#34;]&amp;#34; config.toml &amp;gt; hugo.</description></item><item><title>Basic site configuration</title><link>https://t.is-local.org/en/docs/get-started/basic-configuration/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/basic-configuration/</guid><description>Site-wide configuration details and parameters are defined in your project&amp;rsquo;s configuration file (hugo.toml or config.toml). These include your chosen Hugo theme (Docsy, of course!), project name, community links, Google Analytics configuration, and Markdown parser parameters. See the examples with comments in hugo.toml in the example project for how to add this information. We recommend copying this hugo.toml and editing it even if you’re just using the theme and not copying the entire Docsy example site, as it includes default values for many parameters that you need to set for your site to build correctly.</description></item><item><title>Known issues</title><link>https://t.is-local.org/en/docs/get-started/known_issues/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/known_issues/</guid><description>The following issues are know on MacOS and on Windows Subsystem for Linux:
-MacOS Errors: too many open files or fatal error: pipe failed By default, MacOS permits a small number of open File Descriptors. For larger sites, or when you&amp;rsquo;re simultaneously running multiple applications, you might receive one of the following errors when you run hugo server to preview your site locally:
-POSTCSS v7 and earlier:
-ERROR 2020/04/14 12:37:16 Error: listen tcp 127.</description></item><item><title>Doc Versioning</title><link>https://t.is-local.org/en/docs/adding-content/versioning/</link><pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/versioning/</guid><description>Depending on your project&amp;rsquo;s releases and versioning, you may want to let your users access previous versions of your documentation. How you deploy the previous versions is up to you. This page describes the Docsy features that you can use to provide navigation between the various versions of your docs and to display an information banner on the archived sites.
-Adding a version drop-down menu If you add some [params.versions] in hugo.</description></item><item><title>Docsy Shortcodes</title><link>https://t.is-local.org/en/docs/adding-content/shortcodes/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/shortcodes/</guid><description>Rather than writing all your site pages from scratch, Hugo lets you define and use shortcodes. These are reusable snippets of content that you can include in your pages, often using HTML to create effects that are difficult or impossible to do in simple Markdown. Shortcodes can also have parameters that let you, for example, add your own text to a fancy shortcode text box. As well as Hugo&amp;rsquo;s built-in shortcodes, Docsy provides some shortcodes of its own to help you build your pages.</description></item><item><title>Logos and Images</title><link>https://t.is-local.org/en/docs/adding-content/iconsimages/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/iconsimages/</guid><description>Add your logo By default, Docsy shows a site logo at the start of the navbar, that is, at the extreme left. Place your project&amp;rsquo;s SVG logo in assets/icons/logo.svg. This overrides the default Docsy logo in the theme.
-If you don&amp;rsquo;t want a logo to appear in the navbar, then set site parameter navbar_logo to false in your project&amp;rsquo;s config:
-Configuration file: hugo.toml hugo.yaml hugo.json [params.ui] navbar_logo = false params: ui: navbar_logo: false { &amp;#34;params&amp;#34;: { &amp;#34;ui&amp;#34;: { &amp;#34;navbar_logo&amp;#34;: false } } } For information about styling your logo, see Styling your project logo and name.</description></item><item><title>Print Support</title><link>https://t.is-local.org/en/docs/adding-content/print/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/print/</guid><description>Individual documentation pages print well from most browsers as the layouts have been styled to omit navigational chrome from the printed output.
-On some sites, it can be useful to enable a &amp;ldquo;print entire section&amp;rdquo; feature (as seen in this user guide). Selecting this option renders the entire current top-level section (such as Content and Customization for this page) with all of its child pages and sections in a format suited to printing, complete with a table of contents for the section.</description></item><item><title>Analytics, User Feedback, and SEO</title><link>https://t.is-local.org/en/docs/adding-content/feedback/</link><pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/feedback/</guid><description>Adding Analytics The Docsy theme builds upon Hugo&amp;rsquo;s support for Google Analytics, which Hugo provides through internal templates. Once you set up analytics as described below, usage information for your site (such as page views) is sent to your Google Analytics account.
-Prerequisites You will need an analytics ID for your website before proceeding (technically it&amp;rsquo;s called a measurement ID or property ID but we&amp;rsquo;ll use the term &amp;ldquo;analytics ID&amp;rdquo; in this guide).</description></item><item><title>Hugo Content Tips</title><link>https://t.is-local.org/en/docs/best-practices/site-guidance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/best-practices/site-guidance/</guid><description>Docsy is a theme for the Hugo static site generator. If you&amp;rsquo;re not already familiar with Hugo this page provides some useful tips and potential gotchas for adding and editing content for your site. Feel free to add your own!
-Linking By default, regular relative URLs in links are left unchanged by Hugo (they&amp;rsquo;re still relative links in your site&amp;rsquo;s generated HTML), hence some hardcoded relative links like [relative cross-link](../../peer-folder/sub-file.md) might behave unexpectedly compared to how they work on your local file system.</description></item><item><title>Organizing Your Content</title><link>https://t.is-local.org/en/docs/best-practices/organizing-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/best-practices/organizing-content/</guid><description>If you have a look at our Example Site, you&amp;rsquo;ll see that we&amp;rsquo;ve organized the Documentation section into a number of subsections, each with some recommendations about what you might put in that section.
-Do I need to use this structure? Absolutely not! The site structure in the Example Site was created to meet the needs of large docsets for large products with lots of features, potential tasks, and reference elements.</description></item><item><title>Repository Links and other page information</title><link>https://t.is-local.org/en/docs/adding-content/repository-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/repository-links/</guid><description>The Docsy docs and blog layouts include links for readers to edit the page or create issues for your docs or project via your site&amp;rsquo;s source repository. The current generated links for each docs or blog page are:
-View page source: Brings the user to the page source in your docs repo. Edit this page: Brings the user to an editable version of the page content in their fork (if available) of your docs repo.</description></item><item><title>Taxonomy Support</title><link>https://t.is-local.org/en/docs/adding-content/taxonomy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/taxonomy/</guid><description>Docsy supports Hugo&amp;rsquo;s Taxonomies (see: https://gohugo.io/content-management/taxonomies/) in its docs and blog section. You can see the default layout and can test the behavior of the generated links on this page.
-Terminology To understand the usage of taxonomies you should understand the following terminology:
-Taxonomy a categorization that can be used to classify content - e.g.: Tags, Categories, Projects, People Term a key within the taxonomy - e.g. within projects: Project A, Project B Value a piece of content assigned to a term - e.</description></item><item><title>Diagrams and Formulae</title><link>https://t.is-local.org/en/docs/adding-content/diagrams-and-formulae/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/diagrams-and-formulae/</guid><description>Docsy has built-in support for a number of diagram creation and typesetting tools you can use to add rich content to your site, including \(\KaTeX\), Mermaid, Diagrams.net, PlantUML, and MarkMap.
-\(\LaTeX\) support with \(\KaTeX\) \(\LaTeX\) is a high-quality typesetting system for the production of technical and scientific documentation. Due to its excellent math typesetting capabilities, \(\TeX\) became the de facto standard for the communication and publication of scientific documents, especially if these documents contain a lot of mathematical formulae.</description></item><item><title>Docsy 0.10.0 release report</title><link>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</guid><description>The big news with Docsy 0.10.0 is color themes and dark mode!
-Hugo: breaking changes and deprecation notices In this release, Docsy&amp;rsquo;s Hugo dependency is upgraded to 0.125.4 from 0.122.0. An important thing to note here is that Hugo 0.123.0 was a significant upgrade that included some breaking changes. Before upgrading to this Docsy version, review Hugo&amp;rsquo;s deprecation notices and breaking changes since 0.122.0.
-Hugo version support reminder Each Docsy version officially only supports the Hugo version specified in the project&amp;rsquo;s package.</description></item><item><title>Docsy 0.9.0 release report</title><link>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</guid><description>Docsy 0.9.0 is a sizable1 release (containing 65+ PRs) that has some breaking and notable changes worth calling out, namely those related to:
-Footer improvements Repository links and other page info Look and feel Thank you to all contributors!
-Footer improvements For a list of all footer improvements and fixes included in this release, see #1818. We mention a few in this section. More footer improvements, for even easier customization, are planned for the next major release (#1852).</description></item><item><title>Docsy priorities for 2024</title><link>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</guid><description>TL;DR 1.4K projects use Docsy! The top user-project focused priorities for 2024 are: improving Docsy&amp;rsquo;s stability, usability &amp;amp; customizability, and cohesiveness while performing feature consolidation.
-Docsy is a popular theme The Hugo-Docsy tool combo is powerful and effective, as I&amp;rsquo;ve blogged about elsewhere. It&amp;rsquo;s maybe no surprise then, to see Docsy used by 1.4K projects1. Why is Docsy popular? I can&amp;rsquo;t say for sure, but I use and recommend Docsy because it has the core features &amp;mdash; necessary for publishing non-trivial tech-doc sites &amp;mdash; that projects seem to want and need, including support for versioning, multiple languages, auto-generated site navigation, and more.</description></item><item><title>Upgrading to Docsy 0.7 &amp; Bootstrap 5</title><link>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</guid><description>Last June, Docsy celebrated a significant milestone with the release of version 0.7.0. This major upgrade was the result of six months of meticulous work (#470) focused on the migration to Bootstrap 5.2. For highlights and the rationale behind that journey, see Migrating to Bootstrap 5.2.
-This blog post is intended to help those who are upgrading to Docsy 0.7 and Bootstrap 5, based on my Docsy 0.7 upgrade experiences, specifically related to Bootstrap.</description></item><item><title>Migrating to Bootstrap 5.2</title><link>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</guid><description>Docsy, and Docsy-based project websites (including those at the CNCF), have been happily using the Bootstrap CSS framework from Docsy&amp;rsquo;s inception. In January of this year, Bootstrap 4 (the version used by Docsy for the past few years) reached its end of life. While we, the Docsy steering committee, have been eager to benefit from the Bootstrap 5 improvements, we were concerned about the magnitude of the migration effort, as well as the impact on downstream projects.</description></item><item><title>Hello Docsy!</title><link>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</guid><description>Hello It may seem strange to see a &amp;ldquo;Hello&amp;rdquo; post from a project that&amp;rsquo;s several years old, but as Docsy matures as a community-driven project, we thought it was time to (re)introduce ourselves and talk about what&amp;rsquo;s new with your favorite (we hope) Hugo documentation theme!
-Discuss amongst yourselves Our Discussions are really hopping lately! Don&amp;rsquo;t miss our notice of the upcoming deprecation of the Font-Awesome and Bootstrap git submodules or our announcement of our new governance model!</description></item><item><title>About Docsy</title><link>https://t.is-local.org/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/about/</guid><description>About me Docsy is a pre-configured Hugo theme that provides the core features and behaviors needed to create a technical documentation site. Use Docsy to set up your documentation website, including an optional Blog section, and then spend your time focusing on authoring technical content. Depending on how you choose to configure Docsy and whether you use a hosting service that supports continuous builds, you can even just add your Markdown or HTML content file into a folder on your source repository, and then sit back while it automatically gets added to your site - complete with updated menus.</description></item><item><title>Search Results</title><link>https://t.is-local.org/en/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/search/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tommas</title><link>https://t.is-local.org/en/</link><description>Recent content on Tommas</description><generator>Hugo</generator><language>en</language><atom:link href="https://t.is-local.org/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Before you begin</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/installation-prerequisites/</link><pubDate>Wed, 08 Dec 2021 11:12:59 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/installation-prerequisites/</guid><description>&lt;p>This page describes the prerequisites for building a site that uses Docsy as a Hugo Module.&lt;/p>
+&lt;h2 id="install-hugo">Install Hugo&lt;a class="td-heading-self-link" href="#install-hugo" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>You need a &lt;a href="https://github.com/gohugoio/hugo/releases">recent &lt;strong>extended&lt;/strong> version&lt;/a> (version 0.110.0 or later) of &lt;a href="https://gohugo.io/">Hugo&lt;/a> to do local builds and previews of sites (like this one) that use Docsy. If you install from the release page, make sure to get the &lt;code>extended&lt;/code> Hugo version, which supports &lt;a href="https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html">SCSS&lt;/a>; you may need to scroll down the list of releases to see it.&lt;/p></description></item><item><title>Adding Content</title><link>https://t.is-local.org/en/docs/adding-content/content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/content/</guid><description>&lt;p>So you&amp;rsquo;ve got a new Hugo website with Docsy, now it&amp;rsquo;s time to add some content! This page tells you how to use the theme to add and structure your site content.&lt;/p>
+&lt;h2 id="content-root-directory">Content root directory&lt;a class="td-heading-self-link" href="#content-root-directory" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>You add content for your site under the &lt;strong>content root directory&lt;/strong> of your Hugo site project - either &lt;code>content/&lt;/code> or a &lt;a href="https://t.is-local.org/en/docs/language/">language-specific&lt;/a> root like &lt;code>content/en/&lt;/code>. The main exception here is static files that you don&amp;rsquo;t want built into your site: you can find out more about where you add these below in &lt;a href="https://t.is-local.org/en/docs/adding-content/content/#adding-static-content">Adding static content&lt;/a>. The files in your content root directory are typically grouped in subdirectories corresponding to your site&amp;rsquo;s sections and templates, which we&amp;rsquo;ll look at in &lt;a href="https://t.is-local.org/en/docs/adding-content/content/#content-sections-and-templates">Content sections and templates&lt;/a>.&lt;/p></description></item><item><title>Update your Docsy Hugo Module</title><link>https://t.is-local.org/en/docs/updating/updating-hugo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-hugo-module/</guid><description>&lt;p>When using the Docsy theme as a Hugo Module, updating your theme is really easy.&lt;/p>
+&lt;p>At the command prompt, change to the root directory of your existing site.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then invoke hugo&amp;rsquo;s module &lt;code>get&lt;/code> subcommand with the update flag:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo mod get -u github.com/google/docsy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Hugo automatically pulls in the latest theme version. That&amp;rsquo;s it, your update is
+done!&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ &lt;p>If you want to set your module to a certain version inside the Docsy theme repo,
+simply specify the name of the tag representing this version when updating your
+theme, for example:&lt;/p></description></item><item><title>Other setup options</title><link>https://t.is-local.org/en/docs/get-started/other-options/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/other-options/</guid><description>&lt;p>If you don&amp;rsquo;t want to use
+&lt;a href="https://t.is-local.org/en/docs/get-started/docsy-as-module/">Docsy as a Hugo Module&lt;/a> (for example if you
+do not want to install Go) but still don&amp;rsquo;t want to copy the theme files into
+your own repo, you can &lt;strong>use Docsy as a
+&lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodule&lt;/a>&lt;/strong>. Using
+submodules also lets Hugo use the theme files from Docsy repo, though is more
+complicated to maintain than the Hugo Modules approach. This is the approach
+used in older versions of the Docsy example site, and is still supported. If you
+are using Docsy as a submodule but would like to migrate to Hugo Modules, see
+our &lt;a href="https://t.is-local.org/en/docs/updating/convert-site-to-module/">migration guide&lt;/a>.&lt;/p></description></item><item><title>Create a new site: start with a prepopulated site</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/example-site-as-template/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/example-site-as-template/</guid><description>&lt;p>The simplest way to create a new Docsy site is to use the source of the &lt;a href="https://github.com/google/docsy-example">Docsy example site&lt;/a> as starting point. This approach gives you a skeleton structure for your site, with top-level and documentation sections and templates that you can modify as necessary. The example site automatically pulls in the Docsy theme as a &lt;a href="https://gohugo.io/hugo-modules/">Hugo Module&lt;/a>, so it&amp;rsquo;s easy to &lt;a href="https://t.is-local.org/en/docs/updating/updating-hugo-module/">keep up to date&lt;/a>.&lt;/p>
+&lt;p>If you prefer to create a site from scratch, follow the instructions in Start a site from scratch.&lt;/p></description></item><item><title>Look and Feel</title><link>https://t.is-local.org/en/docs/adding-content/lookandfeel/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/lookandfeel/</guid><description>&lt;p>By default, a site using Docsy has the theme&amp;rsquo;s default fonts, colors, and
+general look and feel. However, if you want your own color scheme (and you
+probably will!) you can very easily override the theme defaults with your own
+project-specific values - Hugo will look in your project files first when
+looking for information to build your site. And because &lt;a href="https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/">Docsy uses Bootstrap
+5&lt;/a> and SCSS for styling, you can override just single values (such as project colors
+and fonts) in its special SCSS project variables file, or do more serious customization
+by creating your own styles.&lt;/p></description></item><item><title>Update Docsy without Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/updating-submodules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/updating-submodules/</guid><description>&lt;p>If you aren&amp;rsquo;t using Hugo Modules, depending on how you chose to install Docsy on your existing site, use one of the following two procedures to update your theme.&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Tip&lt;/h4>
+
+ If you intend to update your site, consider &lt;a href="https://t.is-local.org/en/docs/updating/convert-site-to-module/">converting your site to Hugo Modules&lt;/a>. After conversion, it&amp;rsquo;s even simpler to update Docsy!
+
+&lt;/div>
+
+&lt;h2 id="update-your-docsy-submodule">Update your Docsy submodule&lt;a class="td-heading-self-link" href="#update-your-docsy-submodule" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>If you are using the &lt;a href="https://t.is-local.org/en/docs/get-started/other-options/#option-1-docsy-as-a-git-submodule">Docsy theme as a submodule&lt;/a> in your project, here&amp;rsquo;s how you update the submodule:&lt;/p></description></item><item><title>Create a new site: Start a new site from scratch</title><link>https://t.is-local.org/en/docs/get-started/docsy-as-module/start-from-scratch/</link><pubDate>Wed, 08 Dec 2021 09:21:54 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/docsy-as-module/start-from-scratch/</guid><description>&lt;p>The simplest approach to creating a Docsy site is &lt;a href="https://t.is-local.org/en/docs/get-started/docsy-as-module/example-site-as-template/">copying our example site&lt;/a>. However, if you&amp;rsquo;re an experienced Hugo user or the site structure of our example site doesn&amp;rsquo;t meet your needs, you may prefer to create a new site from scratch. With this option, you&amp;rsquo;ll get Docsy look and feel, navigation, and other features, but you&amp;rsquo;ll need to specify your own site structure.&lt;/p>
+&lt;p>These instructions give you a minimum file structure for your site project only, so that you build and extend your actual site step by step. The first step is adding the Docsy theme as a &lt;a href="https://gohugo.io/hugo-modules/">Hugo Module&lt;/a> to your site. If needed, you can easily &lt;a href="https://t.is-local.org/en/docs/updating/">update&lt;/a> the module to the latest revision from the Docsy GitHub repo.&lt;/p></description></item><item><title>Deploy Docsy inside a Docker container</title><link>https://t.is-local.org/en/docs/get-started/quickstart-docker/</link><pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/get-started/quickstart-docker/</guid><description>&lt;p>We provide a Docker image that you can use to run and test your Docsy site
+locally, without having to install all Docsy&amp;rsquo;s dependencies.&lt;/p>
+&lt;h2 id="install-the-prerequisites">Install the prerequisites&lt;a class="td-heading-self-link" href="#install-the-prerequisites" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>On Mac and Windows, download and install &lt;a href="https://www.docker.com/get-started">Docker
+Desktop&lt;/a>. On Linux, install &lt;a href="https://docs.docker.com/engine/install/#server">Docker
+engine&lt;/a> and &lt;a href="https://docs.docker.com/compose/install/">Docker
+compose&lt;/a>.&lt;/p>
+&lt;p>The installation may require you to reboot your computer for the changes to
+take effect.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/git-guides/install-git">Install git&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="create-your-repository-from-the-docsy-example-template">Create your repository from the docsy-example template&lt;a class="td-heading-self-link" href="#create-your-repository-from-the-docsy-example-template" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>The docsy-example repository provides a basic site structure that you can use
+as starting point to create your own documentation.&lt;/p></description></item><item><title>Navigation and Menus</title><link>https://t.is-local.org/en/docs/adding-content/navigation/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/navigation/</guid><description>&lt;p>Docsy provides multiple built-in navigation features for your sites, including site menus, section menus, and page menus. This page shows you how they work and how to configure and customize them to meet your needs.&lt;/p>
+&lt;h2 id="top-level-menu">Top-level menu&lt;a class="td-heading-self-link" href="#top-level-menu" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>The top level menu (the one that appears in the top navigation bar for the entire site) uses your site&amp;rsquo;s &lt;a href="https://gohugo.io/content-management/menus/">&lt;code>main&lt;/code> menu&lt;/a>. All Hugo sites have a &lt;code>main&lt;/code> menu array of menu entries, accessible via the &lt;code>.Site.Menus&lt;/code> site variable and populatable via page front matter or your site&amp;rsquo;s &lt;code>hugo.toml&lt;/code>/&lt;code>hugo.yaml&lt;/code>/&lt;code>hugo.json&lt;/code>.&lt;/p></description></item><item><title>Search</title><link>https://t.is-local.org/en/docs/adding-content/search/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/search/</guid><description>&lt;p>Docsy offers multiple options that let your readers search your site content, so you can pick one that suits your needs. You can choose from:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://t.is-local.org/en/docs/adding-content/search/#configure-search-with-a-google-custom-search-engine">Google Custom Search Engine&lt;/a> (GCSE), the default option, which uses Google&amp;rsquo;s index of your public site to generate a search results page.&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/docs/adding-content/search/#algolia-docsearch">Algolia DocSearch&lt;/a>, which uses Algolia&amp;rsquo;s indexing and search mechanism. Search results are displayed as a pop-up. Algolia DocSearch is free for public documentation sites.&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/docs/adding-content/search/#local-search-with-lunr">Local search with Lunr&lt;/a>, which uses Javascript to index and search your site without the need to connect to external services. This option doesn&amp;rsquo;t require your site to be public.&lt;/li>
+&lt;/ul>
+&lt;p>If you enable any of these search options in your project &lt;a href="https://gohugo.io/getting-started/configuration/#configuration-file">configuration file&lt;/a>, a search box displays in the right of your top navigation bar. By default a search box also displays at the top of the section menu in the left navigation pane, which you can disable if you prefer, or if you&amp;rsquo;re using a search option that only works with the top search box.&lt;/p></description></item><item><title>Migrate to Hugo Modules</title><link>https://t.is-local.org/en/docs/updating/convert-site-to-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/updating/convert-site-to-module/</guid><description>&lt;h2 id="tldr-conversion-for-the-impatient-expert">TL;DR: Conversion for the impatient expert&lt;a class="td-heading-self-link" href="#tldr-conversion-for-the-impatient-expert" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Run the following from the command line:&lt;/p>
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ CLI:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="bash" aria-controls="tabs-00-01" aria-selected="true">
+ Unix shell
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="batchfile" aria-controls="tabs-00-02" aria-selected="false">
+ Windows command line
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> /path/to/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4e9a06">&amp;#39;/theme = \[&amp;#34;docsy&amp;#34;\]/d&amp;#39;&lt;/span> config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv config.toml hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &amp;gt;&amp;gt; hugo.toml &lt;span style="color:#4e9a06">&amp;lt;&amp;lt;EOL
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[module]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">proxy = &amp;#34;direct&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">[[module.imports]]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">path = &amp;#34;github.com/google/docsy&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">EOL&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Batchfile" data-lang="Batchfile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">cd&lt;/span> my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod init github.com/me-at-github/my-existing-site
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo mod get github.com/google/docsy@vmain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findstr /v /c:&lt;span style="color:#4e9a06">&amp;#34;theme = [\&amp;#34;&lt;/span>docsy\&lt;span style="color:#4e9a06">&amp;#34;]&amp;#34;&lt;/span> config.toml &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span> hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">echo&lt;/span> [module]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>proxy = &lt;span style="color:#4e9a06">&amp;#34;direct&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>[[module.imports]]&lt;span style="color:#4e9a06">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>path = &lt;span style="color:#4e9a06">&amp;#34;github.com/google/docsy&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&amp;gt;&amp;gt;&lt;/span>hugo.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;h2 id="detailed-conversion-instructions">Detailed conversion instructions&lt;a class="td-heading-self-link" href="#detailed-conversion-instructions" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;h3 id="import-the-docsy-theme-module-as-a-dependency-of-your-site">Import the Docsy theme module as a dependency of your site&lt;a class="td-heading-self-link" href="#import-the-docsy-theme-module-as-a-dependency-of-your-site" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>At the command prompt, change to the root directory of your existing site.&lt;/p></description></item><item><title>Basic site configuration</title><link>https://t.is-local.org/en/docs/get-started/basic-configuration/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/basic-configuration/</guid><description>&lt;p>Site-wide configuration details and parameters are defined in your project&amp;rsquo;s &lt;a href="https://gohugo.io/getting-started/configuration/#configuration-file">configuration file&lt;/a> (&lt;code>hugo.toml&lt;/code> or &lt;code>config.toml&lt;/code>). These include your chosen Hugo theme (Docsy, of course!), project name, community links, Google Analytics configuration, and Markdown parser parameters. See the examples with comments in &lt;a href="https://github.com/google/docsy-example/blob/main/hugo.toml">&lt;code>hugo.toml&lt;/code> in the example project&lt;/a> for how to add this information. &lt;strong>We recommend copying this hugo.toml and editing it even if you’re just using the theme and not copying the entire Docsy example site&lt;/strong>, as it includes default values for many parameters that you need to set for your site to build correctly.&lt;/p></description></item><item><title>Known issues</title><link>https://t.is-local.org/en/docs/get-started/known_issues/</link><pubDate>Wed, 08 Dec 2021 09:22:27 +0100</pubDate><guid>https://t.is-local.org/en/docs/get-started/known_issues/</guid><description>&lt;p>The following issues are know on &lt;a href="https://t.is-local.org/en/docs/get-started/known_issues/#macos">MacOS&lt;/a> and on &lt;a href="https://t.is-local.org/en/docs/get-started/known_issues/#windows-subsystem-for-linux-wsl">Windows Subsystem for Linux&lt;/a>:&lt;/p>
+&lt;h3 id="macos">MacOS&lt;a class="td-heading-self-link" href="#macos" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;h4 id="errors-too-many-open-files-or-fatal-error-pipe-failed">Errors: &lt;code>too many open files&lt;/code> or &lt;code>fatal error: pipe failed&lt;/code>&lt;a class="td-heading-self-link" href="#errors-too-many-open-files-or-fatal-error-pipe-failed" aria-label="Heading self-link">&lt;/a>&lt;/h4>
+&lt;p>By default, MacOS permits a small number of open File Descriptors. For larger sites, or when you&amp;rsquo;re simultaneously running multiple applications,
+you might receive one of the following errors when you run &lt;a href="https://gohugo.io/commands/hugo_server/">&lt;code>hugo server&lt;/code>&lt;/a> to preview your site locally:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>POSTCSS v7 and earlier:&lt;/p>
+&lt;pre tabindex="0">&lt;code>ERROR 2020/04/14 12:37:16 Error: listen tcp 127.0.0.1:1313: socket: too many open files
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>
+&lt;p>POSTCSS v8 and later:&lt;/p></description></item><item><title>Doc Versioning</title><link>https://t.is-local.org/en/docs/adding-content/versioning/</link><pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/versioning/</guid><description>&lt;p>Depending on your project&amp;rsquo;s releases and versioning, you may want to let your
+users access previous versions of your documentation. How you deploy the
+previous versions is up to you. This page describes the Docsy features that you
+can use to provide navigation between the various versions of your docs and
+to display an information banner on the archived sites.&lt;/p>
+&lt;h2 id="adding-a-version-drop-down-menu">Adding a version drop-down menu&lt;a class="td-heading-self-link" href="#adding-a-version-drop-down-menu" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>If you add some &lt;code>[params.versions]&lt;/code> in &lt;code>hugo.toml&lt;/code>/&lt;code>hugo.yaml&lt;/code>/&lt;code>hugo.json&lt;/code>, the Docsy theme adds a
+version selector drop down to the top-level menu. You specify a URL and a name
+for each version you would like to add to the menu, as in the following example:&lt;/p></description></item><item><title>Docsy Shortcodes</title><link>https://t.is-local.org/en/docs/adding-content/shortcodes/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/shortcodes/</guid><description>&lt;p>Rather than writing all your site pages from scratch, Hugo lets you define and use &lt;a href="https://gohugo.io/content-management/shortcodes/">shortcodes&lt;/a>. These are reusable snippets of content that you can include in your pages, often using HTML to create effects that are difficult or impossible to do in simple Markdown. Shortcodes can also have parameters that let you, for example, add your own text to a fancy shortcode text box. As well as Hugo&amp;rsquo;s &lt;a href="https://gohugo.io/content-management/shortcodes/">built-in shortcodes&lt;/a>, Docsy provides some shortcodes of its own to help you build your pages.&lt;/p></description></item><item><title>Logos and Images</title><link>https://t.is-local.org/en/docs/adding-content/iconsimages/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/iconsimages/</guid><description>&lt;h2 id="add-your-logo">Add your logo&lt;a class="td-heading-self-link" href="#add-your-logo" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>By default, Docsy shows a site logo at the start of the navbar, that is, at the
+extreme left. Place your project&amp;rsquo;s SVG logo in &lt;code>assets/icons/logo.svg&lt;/code>. This
+overrides the default Docsy logo in the theme.&lt;/p>
+&lt;p>If you don&amp;rsquo;t want a logo to appear in the navbar, then set site parameter &lt;code>navbar_logo&lt;/code>
+to &lt;code>false&lt;/code> in your project&amp;rsquo;s config:&lt;/p>
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false">
+ Configuration file:
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="toml" aria-controls="tabs-00-01" aria-selected="true">
+ hugo.toml
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="yaml" aria-controls="tabs-00-02" aria-selected="false">
+ hugo.yaml
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ data-td-tp-persist="json" aria-controls="tabs-00-03" aria-selected="false">
+ hugo.json
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>
+ &lt;/div>
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#000">params&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ui&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">navbar_logo&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">params&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ui&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">navbar_logo&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;params&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;ui&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;navbar_logo&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>For information about styling your logo, see &lt;a href="https://t.is-local.org/en/docs/adding-content/lookandfeel/#styling-your-project-logo-and-name">Styling your project logo and
+name&lt;/a>.&lt;/p></description></item><item><title>Print Support</title><link>https://t.is-local.org/en/docs/adding-content/print/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/print/</guid><description>&lt;p>Individual documentation pages print well from most browsers as the layouts have been styled to omit navigational chrome from the printed output.&lt;/p>
+&lt;p>On some sites, it can be useful to enable a &amp;ldquo;print entire section&amp;rdquo; feature (as seen in this user guide). Selecting this option renders the entire current top-level section (such as Content and Customization for this page) with all of its child pages and sections in a format suited to printing, complete with a table of contents for the section.&lt;/p></description></item><item><title>Analytics, User Feedback, and SEO</title><link>https://t.is-local.org/en/docs/adding-content/feedback/</link><pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/feedback/</guid><description>&lt;h2 id="adding-analytics">Adding Analytics&lt;a class="td-heading-self-link" href="#adding-analytics" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>The Docsy theme builds upon &lt;a href="https://gohugo.io/templates/internal/#google-analytics">Hugo&amp;rsquo;s support for Google Analytics&lt;/a>,
+which Hugo provides through &lt;a href="https://gohugo.io/templates/internal/">internal templates&lt;/a>. Once you set up analytics as
+described below, usage information for your site (such as page views) is sent to
+your &lt;a href="https://analytics.google.com/analytics/web/">Google Analytics&lt;/a> account.&lt;/p>
+&lt;h3 id="prerequisites">Prerequisites&lt;a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>You will need an &lt;strong>analytics ID&lt;/strong> for your website before proceeding
+(technically it&amp;rsquo;s called a measurement ID or property ID but we&amp;rsquo;ll use the term
+&amp;ldquo;analytics ID&amp;rdquo; in this guide). If you don&amp;rsquo;t have one, see the &lt;strong>How to get
+started&lt;/strong> section of &lt;a href="https://support.google.com/analytics/answer/1042508">Introducing Google Analytics 4 (GA4)&lt;/a>.&lt;/p></description></item><item><title>Hugo Content Tips</title><link>https://t.is-local.org/en/docs/best-practices/site-guidance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/best-practices/site-guidance/</guid><description>&lt;p>Docsy is a theme for the &lt;a href="https://gohugo.io/">Hugo&lt;/a> static site generator.
+If you&amp;rsquo;re not already familiar with Hugo this page provides some useful tips and
+potential gotchas for adding and editing content for your site. Feel free to add your own!&lt;/p>
+&lt;h2 id="linking">Linking&lt;a class="td-heading-self-link" href="#linking" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>By default, regular relative URLs in links are left unchanged by Hugo (they&amp;rsquo;re still relative links in your site&amp;rsquo;s generated HTML), hence some hardcoded relative links like &lt;code>[relative cross-link](../../peer-folder/sub-file.md)&lt;/code> might behave unexpectedly compared to how they work on your local file system. You may find it helpful to use some of Hugo&amp;rsquo;s built-in &lt;a href="https://gohugo.io/content-management/cross-references/#use-ref-and-relref">link shortcodes&lt;/a> to avoid broken links in your generated site. For example a &lt;code>{{&amp;lt; ref &amp;quot;filename.md&amp;quot; &amp;gt;}}&lt;/code> link in Hugo will actually
+find and automatically link to your file named &lt;code>filename.md&lt;/code>.&lt;/p></description></item><item><title>Organizing Your Content</title><link>https://t.is-local.org/en/docs/best-practices/organizing-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/best-practices/organizing-content/</guid><description>&lt;p>If you have a look at our &lt;a href="https://example.docsy.dev/about/">Example Site&lt;/a>, you&amp;rsquo;ll see that we&amp;rsquo;ve organized
+the Documentation section into a number of subsections, each with some recommendations about what you might put
+in that section.&lt;/p>
+&lt;h2 id="do-i-need-to-use-this-structure">Do I need to use this structure?&lt;a class="td-heading-self-link" href="#do-i-need-to-use-this-structure" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>Absolutely not! The site structure in the Example Site was created to meet the needs of large docsets for large
+products with lots of features, potential tasks, and reference elements. For a simpler docset (like this one!),
+it&amp;rsquo;s fine to just structure your docs around specific features that your users need to know about. Even for larger
+documentation sets, you may find that the structure isn&amp;rsquo;t useful &amp;ldquo;as is&amp;rdquo;, or that you don&amp;rsquo;t need to use all the
+section types.&lt;/p></description></item><item><title>Repository Links and other page information</title><link>https://t.is-local.org/en/docs/adding-content/repository-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/repository-links/</guid><description>&lt;p>The Docsy &lt;a href="https://t.is-local.org/en/docs/adding-content/content/#adding-docs-and-blog-posts">docs and blog layouts&lt;/a> include links for readers to edit the page or create issues for your docs or project via your site&amp;rsquo;s source repository. The current generated links for each docs or blog page are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>View page source&lt;/strong>: Brings the user to the page source in your docs repo.&lt;/li>
+&lt;li>&lt;strong>Edit this page&lt;/strong>: Brings the user to an editable version of the page content in their fork (if available) of your docs repo. If the user doesn&amp;rsquo;t have a current fork of your docs repo, they are invited to create one before making their edit. The user can then create a pull request for your docs.&lt;/li>
+&lt;li>&lt;strong>Create child page&lt;/strong>: Brings the user to a create new file form in their fork of your docs repo. The new file will be located as a child of the page they clicked the link on. The form will be pre-populated with a template the user can edit to create their page. You can change this by adding &lt;code>assets/stubs/new-page-template.md&lt;/code> to your own project.&lt;/li>
+&lt;li>&lt;strong>Create documentation issue&lt;/strong>: Brings the user to a new issue form in your docs repo with the name of the current page as the issue&amp;rsquo;s title.&lt;/li>
+&lt;li>&lt;strong>Create project issue&lt;/strong> (optional): Brings the user to a new issue form in your project repo. This can be useful if you have separate project and docs repos and your users want to file issues against the project feature being discussed rather than your docs.&lt;/li>
+&lt;/ul>
+&lt;p>This page shows you how to configure these links.&lt;/p></description></item><item><title>Taxonomy Support</title><link>https://t.is-local.org/en/docs/adding-content/taxonomy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/taxonomy/</guid><description>&lt;p>Docsy supports Hugo&amp;rsquo;s Taxonomies (see: &lt;a href="https://gohugo.io/content-management/taxonomies/">https://gohugo.io/content-management/taxonomies/&lt;/a>) in its docs and blog section. You can see the default layout and can test the behavior of the generated links on this page.&lt;/p>
+&lt;h2 id="terminology">Terminology&lt;a class="td-heading-self-link" href="#terminology" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>To understand the usage of taxonomies you should understand the following terminology:&lt;/p>
+&lt;dl>
+&lt;dt>Taxonomy&lt;/dt>
+&lt;dd>a categorization that can be used to classify content - e.g.: Tags, Categories, Projects, People&lt;/dd>
+&lt;dt>Term&lt;/dt>
+&lt;dd>a key within the taxonomy - e.g. within projects: Project A, Project B&lt;/dd>
+&lt;dt>Value&lt;/dt>
+&lt;dd>a piece of content assigned to a term - e.g. a page of your site, that belongs to a specific project&lt;/dd>
+&lt;/dl>
+&lt;p>A example taxonomy for a movie website you can find in the official Hugo docs: &lt;a href="https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website">https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website&lt;/a>&lt;/p></description></item><item><title>Diagrams and Formulae</title><link>https://t.is-local.org/en/docs/adding-content/diagrams-and-formulae/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/docs/adding-content/diagrams-and-formulae/</guid><description>&lt;p>Docsy has built-in support for a number of diagram creation and typesetting tools you can use to add rich content to your site, including \(\KaTeX\), Mermaid, Diagrams.net, PlantUML, and MarkMap.&lt;/p>
+&lt;h2 id="latex-support-with-katex">\(\LaTeX\) support with \(\KaTeX\)&lt;a class="td-heading-self-link" href="#latex-support-with-katex" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://www.latex-project.org/">\(\LaTeX\)&lt;/a> is a high-quality typesetting system for the production of technical and scientific documentation. Due to its excellent math typesetting capabilities, \(\TeX\) became the de facto standard for the communication and publication of scientific documents, especially if these documents contain a lot of mathematical formulae. Designed and mostly written by Donald Knuth, the initial version was released in 1978. Dating back that far, \(\LaTeX\) has &lt;code>pdf&lt;/code> as its primary output target and is not particularly well suited for producing HTML output for the Web. Fortunately, with &lt;a href="https://katex.org/">\(\KaTeX\)&lt;/a> there exists a fast and easy-to-use JavaScript library for \(\TeX\) math rendering on the web, which was integrated into the Docsy theme.&lt;/p></description></item><item><title>Docsy 0.10.0 release report</title><link>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/05/01/docsy-0.10.0-release-report/</guid><description>&lt;p>The big news with Docsy &lt;a href="https://github.com/google/docsy/releases/tag/v0.10.0">0.10.0&lt;/a> is color themes and dark mode!&lt;/p>
+&lt;h2 id="hugo-breaking-changes-and-deprecation-notices">Hugo: breaking changes and deprecation notices&lt;a class="td-heading-self-link" href="#hugo-breaking-changes-and-deprecation-notices" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>In this release, Docsy&amp;rsquo;s Hugo dependency is upgraded to &lt;strong>0.125.4&lt;/strong> from
+0.122.0. An important thing to note here is that Hugo &lt;a href="https://github.com/gohugoio/hugo/releases/tag/v0.123.0">0.123.0&lt;/a> was a
+significant upgrade that included some &lt;strong>breaking changes&lt;/strong>. Before upgrading to
+this Docsy version, review Hugo&amp;rsquo;s deprecation notices and breaking changes since
+0.122.0.&lt;/p>
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Hugo version support reminder&lt;/h4>
+
+ Each Docsy version officially &lt;strong>only&lt;/strong> supports the Hugo version specified in
+the project&amp;rsquo;s &lt;a href="https://github.com/google/docsy/blob/main/package.json">package.json&lt;/a> entry for &lt;a href="https://github.com/jakejarvis/hugo-extended">hugo-extended&lt;/a>. Any other compatibility
+is on a best effort basis.
+
+&lt;/div>
+
+&lt;p>A number of updates to this release were to address Hugo&amp;rsquo;s deprecation notices.
+For the complete list, search for &lt;a href="https://github.com/google/docsy/releases/tag/v0.10.0">0.10.0&lt;/a> release changes with &amp;ldquo;deprecat&amp;rdquo; in
+the title.&lt;/p></description></item><item><title>Docsy 0.9.0 release report</title><link>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/</guid><description>&lt;p>Docsy &lt;a href="https://github.com/google/docsy/releases/tag/v0.9.0">0.9.0&lt;/a> is a sizable&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> release (&lt;a href="https://github.com/google/docsy/compare/v0.8.0...v0.9.0">containing 65+ PRs&lt;/a>)
+that has some breaking and notable changes worth calling out, namely those
+related to:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#footer">Footer improvements&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#page-meta">Repository links and other page info&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://t.is-local.org/en/blog/2024/02/09/docsy-0.9.0-release-report/#look-and-feel">Look and feel&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Thank you to all &lt;a href="https://github.com/google/docsy/releases/tag/v0.9.0">contributors&lt;/a>!&lt;/p>
+&lt;h2 id="footer">Footer improvements&lt;a class="td-heading-self-link" href="#footer" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>For a list of all footer improvements and fixes included in this release, see
+&lt;a href="https://github.com/google/docsy/pull/1818">#1818&lt;/a>. We mention a few in this section. More footer improvements, for even
+easier customization, are planned for the next &lt;a href="https://github.com/google/docsy/issues/1812">major release&lt;/a> (&lt;a href="https://github.com/google/docsy/issues/1852">#1852&lt;/a>).&lt;/p></description></item><item><title>Docsy priorities for 2024</title><link>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/11/28/docsy-priorities-for-2024/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>TL;DR&lt;/strong> 1.4K projects use Docsy! The top user-project focused priorities for
+2024 are: improving Docsy&amp;rsquo;s stability, usability &amp;amp; customizability, and
+cohesiveness while performing feature consolidation.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="docsy-is-a-popular-theme">Docsy is a popular theme&lt;a class="td-heading-self-link" href="#docsy-is-a-popular-theme" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>The Hugo-Docsy tool combo is powerful and effective, as I&amp;rsquo;ve &lt;a href="https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/">blogged about
+elsewhere&lt;/a>. It&amp;rsquo;s maybe no surprise then, to see Docsy &lt;a href="https://github.com/google/docsy/network/dependents">used by 1.4K
+projects&lt;/a>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Why is Docsy popular? I can&amp;rsquo;t say for sure, but
+I use and recommend Docsy because it has the core features &amp;mdash; necessary for
+publishing non-trivial tech-doc sites &amp;mdash; that projects seem to want and need,
+including support for versioning, multiple languages, auto-generated site
+navigation, and more. It&amp;rsquo;s quick to set up, and it allows projects to focus on
+delivering site content rather than writing site template code.&lt;/p></description></item><item><title>Upgrading to Docsy 0.7 &amp; Bootstrap 5</title><link>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/08/03/upgrading-to-docsy-0.7-bootstrap-5/</guid><description>&lt;p>Last June, Docsy celebrated a significant milestone with the release of version
+&lt;a href="https://github.com/google/docsy/releases/tag/v0.7.0">0.7.0&lt;/a>. This major upgrade
+was the result of
+&lt;a href="https://github.com/google/docsy/issues/470">six months of meticulous work (#470)&lt;/a>
+focused on the migration to Bootstrap 5.2. For highlights and the rationale
+behind that journey, see
+&lt;a href="https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/">Migrating to Bootstrap 5.2&lt;/a>.&lt;/p>
+&lt;p>This blog post is intended to help those who are upgrading to Docsy 0.7 and
+Bootstrap 5, based on my Docsy 0.7 upgrade experiences, specifically related to
+Bootstrap. The post starts with general guidance for Docsy-based projects
+wishing to upgrade. Every project&amp;rsquo;s migration experience will be unique, but
+hopefully this post, and the two included case studies, will make your upgrade
+process easier and faster.&lt;/p></description></item><item><title>Migrating to Bootstrap 5.2</title><link>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</link><pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2023/06/05/migrating-to-bootstrap-5.2/</guid><description>&lt;p>&lt;a href="https://docsy.dev">Docsy&lt;/a>, and Docsy-based project websites (&lt;a href="https://www.cncf.io/blog/2023/01/19/fast-and-effective-tools-for-cncf-and-open-source-project-websites/">including those
+at the CNCF&lt;/a>), have been happily using the
+&lt;a href="https://getbootstrap.com">Bootstrap CSS framework&lt;/a> from Docsy&amp;rsquo;s inception. In
+January of this year, Bootstrap 4 (the version used by Docsy for the past few
+years) reached its &lt;a href="https://endoflife.date/bootstrap">end of life&lt;/a>. While we,
+the Docsy steering committee, have been eager to benefit from the Bootstrap 5
+improvements, we were concerned about the magnitude of the migration effort, as
+well as the impact on downstream projects. Because of this, the migration was
+delayed for as long as possible. In December of 2022, when Bootstrap 4 stopped
+receiving critical upgrades, we declared
+&lt;a href="https://github.com/google/docsy/discussions/1308">Docsy to be in a feature freeze&lt;/a>,
+and focused our maintenance efforts on the Bootstrap 5 migration.&lt;/p></description></item><item><title>Hello Docsy!</title><link>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/blog/2022/04/07/hello-docsy/</guid><description>&lt;h2 id="hello">Hello&lt;a class="td-heading-self-link" href="#hello" aria-label="Heading self-link">&lt;/a>&lt;/h2>
+&lt;p>It may seem strange to see a &amp;ldquo;Hello&amp;rdquo; post from a project that&amp;rsquo;s several years old, but as Docsy matures as a community-driven project, we thought it was time to (re)introduce ourselves and talk about what&amp;rsquo;s new with your favorite (we hope) Hugo documentation theme!&lt;/p>
+&lt;h3 id="discuss-amongst-yourselves">Discuss amongst yourselves&lt;a class="td-heading-self-link" href="#discuss-amongst-yourselves" aria-label="Heading self-link">&lt;/a>&lt;/h3>
+&lt;p>Our &lt;a href="https://github.com/google/docsy/discussions">Discussions&lt;/a> are really hopping lately! Don&amp;rsquo;t miss our notice of the &lt;a href="https://github.com/google/docsy/discussions/950">upcoming deprecation of the Font-Awesome and Bootstrap git submodules&lt;/a> or our announcement of our &lt;a href="https://github.com/google/docsy/discussions/798">new governance model&lt;/a>!&lt;/p></description></item><item><title>About Docsy</title><link>https://t.is-local.org/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/about/</guid><description>&lt;link rel="preload" as="image" href="https://t.is-local.org/en/about/featured-background_hu12774384441389832556.jpg" media="(max-width: 1200px)">
+&lt;link rel="preload" as="image" href="https://t.is-local.org/en/about/featured-background_hu6562859101307766254.jpg" media="(min-width: 1200px)">
+&lt;style>
+#td-cover-block-0 {
+ background-image: url(/en/about/featured-background_hu12774384441389832556.jpg);
+}
+@media only screen and (min-width: 1200px) {
+ #td-cover-block-0 {
+ background-image: url(/en/about/featured-background_hu6562859101307766254.jpg);
+ }
+}
+&lt;/style>
+&lt;section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-full js-td-cover td-overlay td-overlay--dark -bg-dark">
+ &lt;div class="col-12">
+ &lt;div class="container td-overlay__inner">
+ &lt;div class="text-center">
+ &lt;h1 class="display-1 mt-0 mt-md-5 pb-4">About me&lt;/h1>
+ 
+ &lt;div class="pt-3 lead">
+ 
+ &lt;p>Docsy is a pre-configured Hugo theme that provides the core features and behaviors needed to create a technical documentation site. Use Docsy to set up your documentation website, including an optional Blog section, and then spend your time focusing on authoring technical content. Depending on how you choose to configure Docsy and whether you use a hosting service that supports continuous builds, you can even just add your Markdown or HTML content file into a folder on your source repository, and then sit back while it automatically gets added to your site - complete with updated menus.&lt;/p></description></item><item><title>Search Results</title><link>https://t.is-local.org/en/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://t.is-local.org/en/search/</guid><description/></item></channel></rss>
