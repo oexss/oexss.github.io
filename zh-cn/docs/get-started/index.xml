@@ -103,4 +103,4 @@ gcs_engine_id = &amp;#34;011737558837375720776:fsdu1nryfng&amp;#34;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sysctl -w kern.maxfilesperproc&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">65535&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
-&lt;p>​ 请注意，您可能需要为每个新的shell设置这些限制。&lt;a href="https://www.google.com/search?q=mac+os+launchctl+limit+maxfiles+site%3Aapple.stackexchange.com&amp;oq=mac+os+launchctl+limit+maxfiles+site%3Aapple.stackexchange.com">了解有关这些限制及如何使其永久的更多信息&lt;/a>。&lt;/p></description></item></channel></rss>
+&lt;p>​ 请注意，您可能需要为每个新的shell设置这些限制。&lt;a href="https://www.google.com/search?q=mac&amp;#43;os&amp;#43;launchctl&amp;#43;limit&amp;#43;maxfiles&amp;#43;site%3Aapple.stackexchange.com&amp;amp;oq=mac&amp;#43;os&amp;#43;launchctl&amp;#43;limit&amp;#43;maxfiles&amp;#43;site%3Aapple.stackexchange.com">了解有关这些限制及如何使其永久的更多信息&lt;/a>。&lt;/p></description></item></channel></rss>
